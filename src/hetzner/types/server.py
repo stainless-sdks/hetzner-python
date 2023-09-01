@@ -5,6 +5,7 @@ from typing_extensions import Literal
 
 from .price import Price
 from .._models import BaseModel
+from .cpu_type import CpuType
 from .server_public_net import ServerPublicNet
 
 __all__ = [
@@ -249,7 +250,7 @@ class ServerType(BaseModel):
     cores: int
     """Number of cpu cores a Server of this type will have"""
 
-    cpu_type: Literal["dedicated", "shared"]
+    cpu_type: CpuType
     """Type of cpu"""
 
     deprecated: Optional[bool]

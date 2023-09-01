@@ -10,11 +10,13 @@ from .shared import SortParam as SortParam
 from .shared import StatusParam as StatusParam
 from .shared import HealthStatus as HealthStatus
 from .shared import ResponseMeta as ResponseMeta
+from .cpu_type import CpuType as CpuType
 from .firewall import Firewall as Firewall
 from .primary_ip import PrimaryIp as PrimaryIp
 from .rule_param import RuleParam as RuleParam
 from .certificate import Certificate as Certificate
 from .floating_ip import FloatingIp as FloatingIp
+from .server_type import ServerType as ServerType
 from .load_balancer import LoadBalancer as LoadBalancer
 from .iso_list_params import IsoListParams as IsoListParams
 from .placement_group import PlacementGroup as PlacementGroup

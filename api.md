@@ -449,7 +449,12 @@ Methods:
 Types:
 
 ```python
-from hetzner.types import ServerTypeRetrieveResponse, ServerTypeListResponse
+from hetzner.types import (
+    CpuType,
+    ServerType,
+    ServerTypeRetrieveResponse,
+    ServerTypeListResponse,
+)
 ```
 
 Methods:
