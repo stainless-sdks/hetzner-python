@@ -2,6 +2,6 @@
 
 from typing_extensions import Literal
 
-__all__ = ["CpuType"]
+__all__ = ["CPUType"]
 
-CpuType = Literal["dedicated", "shared"]
+CPUType = Literal["dedicated", "shared"]

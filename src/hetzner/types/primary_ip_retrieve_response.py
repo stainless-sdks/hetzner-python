@@ -1,10 +1,10 @@
 # File generated from our OpenAPI spec by Stainless.
 
 from .._models import BaseModel
-from .primary_ip import PrimaryIp
+from .primary_ip import PrimaryIP
 
-__all__ = ["PrimaryIpRetrieveResponse"]
+__all__ = ["PrimaryIPRetrieveResponse"]
 
 
-class PrimaryIpRetrieveResponse(BaseModel):
-    primary_ip: PrimaryIp
+class PrimaryIPRetrieveResponse(BaseModel):
+    primary_ip: PrimaryIP

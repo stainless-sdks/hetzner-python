@@ -4,13 +4,13 @@ from typing import Optional
 
 from .shared import Action
 from .._models import BaseModel
-from .floating_ip import FloatingIp
+from .floating_ip import FloatingIP
 
-__all__ = ["FloatingIpCreateResponse"]
+__all__ = ["FloatingIPCreateResponse"]
 
 
-class FloatingIpCreateResponse(BaseModel):
-    floating_ip: FloatingIp
+class FloatingIPCreateResponse(BaseModel):
+    floating_ip: FloatingIP
 
     action: Optional[Action] = None
     """Actions show the results and progress of asynchronous requests to the API."""

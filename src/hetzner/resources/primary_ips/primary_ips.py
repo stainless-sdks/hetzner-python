@@ -6,10 +6,10 @@ from typing import TYPE_CHECKING, Dict
 from typing_extensions import Literal
 
 from ...types import (
-    PrimaryIpListResponse,
-    PrimaryIpCreateResponse,
-    PrimaryIpUpdateResponse,
-    PrimaryIpRetrieveResponse,
+    PrimaryIPListResponse,
+    PrimaryIPCreateResponse,
+    PrimaryIPUpdateResponse,
+    PrimaryIPRetrieveResponse,
     primary_ip_list_params,
     primary_ip_create_params,
     primary_ip_update_params,
@@ -23,10 +23,10 @@ from ..._base_client import make_request_options
 if TYPE_CHECKING:
     from ..._client import Hetzner, AsyncHetzner
 
-__all__ = ["PrimaryIps", "AsyncPrimaryIps"]
+__all__ = ["PrimaryIPs", "AsyncPrimaryIPs"]
 
 
-class PrimaryIps(SyncAPIResource):
+class PrimaryIPs(SyncAPIResource):
     actions: Actions
 
     def __init__(self, client: Hetzner) -> None:
@@ -49,7 +49,7 @@ class PrimaryIps(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> PrimaryIpCreateResponse:
+    ) -> PrimaryIPCreateResponse:
         """
         Creates a new Primary IP, optionally assigned to a Server.
 
@@ -104,12 +104,12 @@ class PrimaryIps(SyncAPIResource):
                     "datacenter": datacenter,
                     "labels": labels,
                 },
-                primary_ip_create_params.PrimaryIpCreateParams,
+                primary_ip_create_params.PrimaryIPCreateParams,
             ),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=PrimaryIpCreateResponse,
+            cast_to=PrimaryIPCreateResponse,
         )
 
     def retrieve(
@@ -122,7 +122,7 @@ class PrimaryIps(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> PrimaryIpRetrieveResponse:
+    ) -> PrimaryIPRetrieveResponse:
         """
         Returns a specific Primary IP object.
 
@@ -140,7 +140,7 @@ class PrimaryIps(SyncAPIResource):
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=PrimaryIpRetrieveResponse,
+            cast_to=PrimaryIPRetrieveResponse,
         )
 
     def update(
@@ -156,7 +156,7 @@ class PrimaryIps(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> PrimaryIpUpdateResponse:
+    ) -> PrimaryIPUpdateResponse:
         """
         Updates the Primary IP.
 
@@ -191,12 +191,12 @@ class PrimaryIps(SyncAPIResource):
                     "labels": labels,
                     "name": name,
                 },
-                primary_ip_update_params.PrimaryIpUpdateParams,
+                primary_ip_update_params.PrimaryIPUpdateParams,
             ),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=PrimaryIpUpdateResponse,
+            cast_to=PrimaryIPUpdateResponse,
         )
 
     def list(
@@ -214,7 +214,7 @@ class PrimaryIps(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> PrimaryIpListResponse:
+    ) -> PrimaryIPListResponse:
         """
         Returns all Primary IP objects.
 
@@ -260,10 +260,10 @@ class PrimaryIps(SyncAPIResource):
                         "per_page": per_page,
                         "sort": sort,
                     },
-                    primary_ip_list_params.PrimaryIpListParams,
+                    primary_ip_list_params.PrimaryIPListParams,
                 ),
             ),
-            cast_to=PrimaryIpListResponse,
+            cast_to=PrimaryIPListResponse,
         )
 
     def delete(
@@ -304,7 +304,7 @@ class PrimaryIps(SyncAPIResource):
         )
 
 
-class AsyncPrimaryIps(AsyncAPIResource):
+class AsyncPrimaryIPs(AsyncAPIResource):
     actions: AsyncActions
 
     def __init__(self, client: AsyncHetzner) -> None:
@@ -327,7 +327,7 @@ class AsyncPrimaryIps(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> PrimaryIpCreateResponse:
+    ) -> PrimaryIPCreateResponse:
         """
         Creates a new Primary IP, optionally assigned to a Server.
 
@@ -382,12 +382,12 @@ class AsyncPrimaryIps(AsyncAPIResource):
                     "datacenter": datacenter,
                     "labels": labels,
                 },
-                primary_ip_create_params.PrimaryIpCreateParams,
+                primary_ip_create_params.PrimaryIPCreateParams,
             ),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=PrimaryIpCreateResponse,
+            cast_to=PrimaryIPCreateResponse,
         )
 
     async def retrieve(
@@ -400,7 +400,7 @@ class AsyncPrimaryIps(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> PrimaryIpRetrieveResponse:
+    ) -> PrimaryIPRetrieveResponse:
         """
         Returns a specific Primary IP object.
 
@@ -418,7 +418,7 @@ class AsyncPrimaryIps(AsyncAPIResource):
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=PrimaryIpRetrieveResponse,
+            cast_to=PrimaryIPRetrieveResponse,
         )
 
     async def update(
@@ -434,7 +434,7 @@ class AsyncPrimaryIps(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> PrimaryIpUpdateResponse:
+    ) -> PrimaryIPUpdateResponse:
         """
         Updates the Primary IP.
 
@@ -469,12 +469,12 @@ class AsyncPrimaryIps(AsyncAPIResource):
                     "labels": labels,
                     "name": name,
                 },
-                primary_ip_update_params.PrimaryIpUpdateParams,
+                primary_ip_update_params.PrimaryIPUpdateParams,
             ),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=PrimaryIpUpdateResponse,
+            cast_to=PrimaryIPUpdateResponse,
         )
 
     async def list(
@@ -492,7 +492,7 @@ class AsyncPrimaryIps(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> PrimaryIpListResponse:
+    ) -> PrimaryIPListResponse:
         """
         Returns all Primary IP objects.
 
@@ -538,10 +538,10 @@ class AsyncPrimaryIps(AsyncAPIResource):
                         "per_page": per_page,
                         "sort": sort,
                     },
-                    primary_ip_list_params.PrimaryIpListParams,
+                    primary_ip_list_params.PrimaryIPListParams,
                 ),
             ),
-            cast_to=PrimaryIpListResponse,
+            cast_to=PrimaryIPListResponse,
         )
 
     async def delete(

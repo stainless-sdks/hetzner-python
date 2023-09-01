@@ -6,7 +6,7 @@ from typing_extensions import Literal
 from .price import Price
 from .shared import HealthStatus
 from .._models import BaseModel
-from .load_balancer_target_ip import LoadBalancerTargetIp
+from .load_balancer_target_ip import LoadBalancerTargetIP
 from .load_balancer_service_model import LoadBalancerServiceModel
 
 __all__ = [
@@ -204,7 +204,7 @@ class Target(BaseModel):
     Only present for target types "server" and "ip".
     """
 
-    ip: Optional[LoadBalancerTargetIp] = None
+    ip: Optional[LoadBalancerTargetIP] = None
     """IP targets where the traffic should be routed to.
 
     It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root

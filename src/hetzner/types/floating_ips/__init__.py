@@ -9,10 +9,10 @@ from .action_assign_response import ActionAssignResponse as ActionAssignResponse
 from .action_retrieve_response import ActionRetrieveResponse as ActionRetrieveResponse
 from .action_unassign_response import ActionUnassignResponse as ActionUnassignResponse
 from .action_change_dns_ptr_params import (
-    ActionChangeDnsPtrParams as ActionChangeDnsPtrParams,
+    ActionChangeDNSPtrParams as ActionChangeDNSPtrParams,
 )
 from .action_change_dns_ptr_response import (
-    ActionChangeDnsPtrResponse as ActionChangeDnsPtrResponse,
+    ActionChangeDNSPtrResponse as ActionChangeDNSPtrResponse,
 )
 from .action_change_protection_params import (
     ActionChangeProtectionParams as ActionChangeProtectionParams,

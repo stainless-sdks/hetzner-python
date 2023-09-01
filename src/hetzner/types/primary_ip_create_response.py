@@ -4,13 +4,13 @@ from typing import Optional
 
 from .shared import Action
 from .._models import BaseModel
-from .primary_ip import PrimaryIp
+from .primary_ip import PrimaryIP
 
-__all__ = ["PrimaryIpCreateResponse"]
+__all__ = ["PrimaryIPCreateResponse"]
 
 
-class PrimaryIpCreateResponse(BaseModel):
-    primary_ip: PrimaryIp
+class PrimaryIPCreateResponse(BaseModel):
+    primary_ip: PrimaryIP
 
     action: Optional[Action] = None
     """Actions show the results and progress of asynchronous requests to the API."""

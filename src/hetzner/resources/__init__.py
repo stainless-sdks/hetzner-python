@@ -1,6 +1,6 @@
 # File generated from our OpenAPI spec by Stainless.
 
-from .isos import Isos, AsyncIsos
+from .isos import ISOs, AsyncISOs
 from .images import Images, AsyncImages
 from .actions import Actions, AsyncActions
 from .pricing import Pricing, AsyncPricing
@@ -11,9 +11,9 @@ from .ssh_keys import SshKeys, AsyncSshKeys
 from .firewalls import Firewalls, AsyncFirewalls
 from .locations import Locations, AsyncLocations
 from .datacenters import Datacenters, AsyncDatacenters
-from .primary_ips import PrimaryIps, AsyncPrimaryIps
+from .primary_ips import PrimaryIPs, AsyncPrimaryIPs
 from .certificates import Certificates, AsyncCertificates
-from .floating_ips import FloatingIps, AsyncFloatingIps
+from .floating_ips import FloatingIPs, AsyncFloatingIPs
 from .server_types import ServerTypes, AsyncServerTypes
 from .load_balancers import LoadBalancers, AsyncLoadBalancers
 from .placement_groups import PlacementGroups, AsyncPlacementGroups
@@ -28,12 +28,12 @@ __all__ = [
     "AsyncDatacenters",
     "Firewalls",
     "AsyncFirewalls",
-    "FloatingIps",
-    "AsyncFloatingIps",
+    "FloatingIPs",
+    "AsyncFloatingIPs",
     "Images",
     "AsyncImages",
-    "Isos",
-    "AsyncIsos",
+    "ISOs",
+    "AsyncISOs",
     "LoadBalancerTypes",
     "AsyncLoadBalancerTypes",
     "LoadBalancers",
@@ -46,8 +46,8 @@ __all__ = [
     "AsyncPlacementGroups",
     "Pricing",
     "AsyncPricing",
-    "PrimaryIps",
-    "AsyncPrimaryIps",
+    "PrimaryIPs",
+    "AsyncPrimaryIPs",
     "ServerTypes",
     "AsyncServerTypes",
     "Servers",

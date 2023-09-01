@@ -5,10 +5,10 @@ from __future__ import annotations
 from typing import Dict
 from typing_extensions import Literal, Required, TypedDict
 
-__all__ = ["PrimaryIpCreateParams"]
+__all__ = ["PrimaryIPCreateParams"]
 
 
-class PrimaryIpCreateParams(TypedDict, total=False):
+class PrimaryIPCreateParams(TypedDict, total=False):
     assignee_type: Required[Literal["server"]]
     """Resource type the Primary IP can be assigned to"""
 

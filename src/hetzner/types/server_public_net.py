@@ -5,7 +5,7 @@ from typing_extensions import Literal
 
 from .._models import BaseModel
 
-__all__ = ["ServerPublicNet", "Ipv4", "Ipv6", "Ipv6DnsPtr", "Firewall"]
+__all__ = ["ServerPublicNet", "Ipv4", "Ipv6", "Ipv6DNSPtr", "Firewall"]
 
 
 class Ipv4(BaseModel):
@@ -22,7 +22,7 @@ class Ipv4(BaseModel):
     """ID of the Resource"""
 
 
-class Ipv6DnsPtr(BaseModel):
+class Ipv6DNSPtr(BaseModel):
     dns_ptr: str
     """DNS pointer for the specific IP address"""
 
@@ -37,7 +37,7 @@ class Ipv6(BaseModel):
     blocked: bool
     """If the IP is blocked by our anti abuse dept"""
 
-    dns_ptr: Optional[List[Ipv6DnsPtr]]
+    dns_ptr: Optional[List[Ipv6DNSPtr]]
     """
     Reverse DNS PTR entries for the IPv6 addresses of this Server, `null` by default
     """

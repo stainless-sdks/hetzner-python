@@ -5,7 +5,7 @@ from __future__ import annotations
 from typing import Optional
 from typing_extensions import Literal
 
-from ...types import LoadBalancerTargetIpParam, shared_params
+from ...types import LoadBalancerTargetIPParam, shared_params
 from ..._types import NOT_GIVEN, Body, Query, Headers, NotGiven
 from ..._utils import maybe_transform
 from ..._resource import SyncAPIResource, AsyncAPIResource
@@ -16,7 +16,7 @@ from ...types.load_balancers import (
     ActionAssTargetResponse,
     ActionAddServiceResponse,
     ActionChangeTypeResponse,
-    ActionChangeDnsPtrResponse,
+    ActionChangeDNSPtrResponse,
     ActionRemoveTargetResponse,
     ActionDeleteServiceResponse,
     ActionUpdateServiceResponse,
@@ -206,7 +206,7 @@ class Actions(SyncAPIResource):
         id: int,
         *,
         type: Literal["ip", "label_selector", "server"],
-        ip: LoadBalancerTargetIpParam | NotGiven = NOT_GIVEN,
+        ip: LoadBalancerTargetIPParam | NotGiven = NOT_GIVEN,
         label_selector: action_ass_target_params.LabelSelector | NotGiven = NOT_GIVEN,
         server: action_ass_target_params.Server | NotGiven = NOT_GIVEN,
         use_private_ip: bool | NotGiven = NOT_GIVEN,
@@ -373,7 +373,7 @@ class Actions(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> ActionChangeDnsPtrResponse:
+    ) -> ActionChangeDNSPtrResponse:
         """
         Changes the hostname that will appear when getting the hostname belonging to the
         public IPs (IPv4 and IPv6) of this Load Balancer.
@@ -400,12 +400,12 @@ class Actions(SyncAPIResource):
                     "dns_ptr": dns_ptr,
                     "ip": ip,
                 },
-                action_change_dns_ptr_params.ActionChangeDnsPtrParams,
+                action_change_dns_ptr_params.ActionChangeDNSPtrParams,
             ),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=ActionChangeDnsPtrResponse,
+            cast_to=ActionChangeDNSPtrResponse,
         )
 
     def change_protection(
@@ -635,7 +635,7 @@ class Actions(SyncAPIResource):
         id: int,
         *,
         type: Literal["ip", "label_selector", "server"],
-        ip: LoadBalancerTargetIpParam | NotGiven = NOT_GIVEN,
+        ip: LoadBalancerTargetIPParam | NotGiven = NOT_GIVEN,
         label_selector: action_remove_target_params.LabelSelector | NotGiven = NOT_GIVEN,
         server: action_remove_target_params.Server | NotGiven = NOT_GIVEN,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
@@ -916,7 +916,7 @@ class AsyncActions(AsyncAPIResource):
         id: int,
         *,
         type: Literal["ip", "label_selector", "server"],
-        ip: LoadBalancerTargetIpParam | NotGiven = NOT_GIVEN,
+        ip: LoadBalancerTargetIPParam | NotGiven = NOT_GIVEN,
         label_selector: action_ass_target_params.LabelSelector | NotGiven = NOT_GIVEN,
         server: action_ass_target_params.Server | NotGiven = NOT_GIVEN,
         use_private_ip: bool | NotGiven = NOT_GIVEN,
@@ -1083,7 +1083,7 @@ class AsyncActions(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> ActionChangeDnsPtrResponse:
+    ) -> ActionChangeDNSPtrResponse:
         """
         Changes the hostname that will appear when getting the hostname belonging to the
         public IPs (IPv4 and IPv6) of this Load Balancer.
@@ -1110,12 +1110,12 @@ class AsyncActions(AsyncAPIResource):
                     "dns_ptr": dns_ptr,
                     "ip": ip,
                 },
-                action_change_dns_ptr_params.ActionChangeDnsPtrParams,
+                action_change_dns_ptr_params.ActionChangeDNSPtrParams,
             ),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=ActionChangeDnsPtrResponse,
+            cast_to=ActionChangeDNSPtrResponse,
         )
 
     async def change_protection(
@@ -1345,7 +1345,7 @@ class AsyncActions(AsyncAPIResource):
         id: int,
         *,
         type: Literal["ip", "label_selector", "server"],
-        ip: LoadBalancerTargetIpParam | NotGiven = NOT_GIVEN,
+        ip: LoadBalancerTargetIPParam | NotGiven = NOT_GIVEN,
         label_selector: action_remove_target_params.LabelSelector | NotGiven = NOT_GIVEN,
         server: action_remove_target_params.Server | NotGiven = NOT_GIVEN,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.

@@ -4,13 +4,13 @@ from typing import List, Optional
 
 from .shared import ResponseMeta
 from .._models import BaseModel
-from .primary_ip import PrimaryIp
+from .primary_ip import PrimaryIP
 
-__all__ = ["PrimaryIpListResponse"]
+__all__ = ["PrimaryIPListResponse"]
 
 
-class PrimaryIpListResponse(BaseModel):
-    primary_ips: List[PrimaryIp]
+class PrimaryIPListResponse(BaseModel):
+    primary_ips: List[PrimaryIP]
 
     meta: Optional[ResponseMeta] = None
     """Metadata contained in the response"""

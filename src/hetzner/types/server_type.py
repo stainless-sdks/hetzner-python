@@ -5,7 +5,7 @@ from typing_extensions import Literal
 
 from . import price
 from .._models import BaseModel
-from .cpu_type import CpuType
+from .cpu_type import CPUType
 
 __all__ = ["ServerType", "Price", "Deprecation"]
 
@@ -63,7 +63,7 @@ class ServerType(BaseModel):
     cores: int
     """Number of cpu cores a Server of this type will have"""
 
-    cpu_type: CpuType
+    cpu_type: CPUType
     """Type of cpu"""
 
     deprecated: Optional[bool]

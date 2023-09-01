@@ -5,10 +5,10 @@ from __future__ import annotations
 from typing import Optional
 from typing_extensions import Required, TypedDict
 
-__all__ = ["ActionChangeDnsPtrParams"]
+__all__ = ["ActionChangeDNSPtrParams"]
 
 
-class ActionChangeDnsPtrParams(TypedDict, total=False):
+class ActionChangeDNSPtrParams(TypedDict, total=False):
     dns_ptr: Required[Optional[str]]
     """Hostname to set as a reverse DNS PTR entry, reset to original value if `null`"""
 

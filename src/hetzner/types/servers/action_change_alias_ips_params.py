@@ -5,10 +5,10 @@ from __future__ import annotations
 from typing import List
 from typing_extensions import Required, TypedDict
 
-__all__ = ["ActionChangeAliasIpsParams"]
+__all__ = ["ActionChangeAliasIPsParams"]
 
 
-class ActionChangeAliasIpsParams(TypedDict, total=False):
+class ActionChangeAliasIPsParams(TypedDict, total=False):
     alias_ips: Required[List[str]]
     """New alias IPs to set for this Server"""
 

@@ -6,10 +6,10 @@ from typing import TYPE_CHECKING, Dict
 from typing_extensions import Literal
 
 from ...types import (
-    FloatingIp,
-    FloatingIpCreateResponse,
-    FloatingIpUpdateResponse,
-    FloatingIpRetrieveResponse,
+    FloatingIP,
+    FloatingIPCreateResponse,
+    FloatingIPUpdateResponse,
+    FloatingIPRetrieveResponse,
     floating_ip_list_params,
     floating_ip_create_params,
     floating_ip_update_params,
@@ -18,16 +18,16 @@ from .actions import Actions, AsyncActions
 from ..._types import NOT_GIVEN, Body, Query, Headers, NoneType, NotGiven
 from ..._utils import maybe_transform
 from ..._resource import SyncAPIResource, AsyncAPIResource
-from ...pagination import SyncFloatingIpsPage, AsyncFloatingIpsPage
+from ...pagination import SyncFloatingIPsPage, AsyncFloatingIPsPage
 from ..._base_client import AsyncPaginator, make_request_options
 
 if TYPE_CHECKING:
     from ..._client import Hetzner, AsyncHetzner
 
-__all__ = ["FloatingIps", "AsyncFloatingIps"]
+__all__ = ["FloatingIPs", "AsyncFloatingIPs"]
 
 
-class FloatingIps(SyncAPIResource):
+class FloatingIPs(SyncAPIResource):
     actions: Actions
 
     def __init__(self, client: Hetzner) -> None:
@@ -49,7 +49,7 @@ class FloatingIps(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> FloatingIpCreateResponse:
+    ) -> FloatingIPCreateResponse:
         """Creates a new Floating IP assigned to a Server.
 
         If you want to create a Floating
@@ -88,12 +88,12 @@ class FloatingIps(SyncAPIResource):
                     "name": name,
                     "server": server,
                 },
-                floating_ip_create_params.FloatingIpCreateParams,
+                floating_ip_create_params.FloatingIPCreateParams,
             ),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=FloatingIpCreateResponse,
+            cast_to=FloatingIPCreateResponse,
         )
 
     def retrieve(
@@ -106,7 +106,7 @@ class FloatingIps(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> FloatingIpRetrieveResponse:
+    ) -> FloatingIPRetrieveResponse:
         """
         Returns a specific Floating IP object.
 
@@ -124,7 +124,7 @@ class FloatingIps(SyncAPIResource):
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=FloatingIpRetrieveResponse,
+            cast_to=FloatingIPRetrieveResponse,
         )
 
     def update(
@@ -140,7 +140,7 @@ class FloatingIps(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> FloatingIpUpdateResponse:
+    ) -> FloatingIPUpdateResponse:
         """Updates the description or labels of a Floating IP.
 
         Also note that when updating
@@ -171,12 +171,12 @@ class FloatingIps(SyncAPIResource):
                     "labels": labels,
                     "name": name,
                 },
-                floating_ip_update_params.FloatingIpUpdateParams,
+                floating_ip_update_params.FloatingIPUpdateParams,
             ),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=FloatingIpUpdateResponse,
+            cast_to=FloatingIPUpdateResponse,
         )
 
     def list(
@@ -193,7 +193,7 @@ class FloatingIps(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> SyncFloatingIpsPage[FloatingIp]:
+    ) -> SyncFloatingIPsPage[FloatingIP]:
         """
         Returns all Floating IP objects.
 
@@ -222,7 +222,7 @@ class FloatingIps(SyncAPIResource):
         """
         return self._get_api_list(
             "/floating_ips",
-            page=SyncFloatingIpsPage[FloatingIp],
+            page=SyncFloatingIPsPage[FloatingIP],
             options=make_request_options(
                 extra_headers=extra_headers,
                 extra_query=extra_query,
@@ -236,10 +236,10 @@ class FloatingIps(SyncAPIResource):
                         "per_page": per_page,
                         "sort": sort,
                     },
-                    floating_ip_list_params.FloatingIpListParams,
+                    floating_ip_list_params.FloatingIPListParams,
                 ),
             ),
-            model=FloatingIp,
+            model=FloatingIP,
         )
 
     def delete(
@@ -277,7 +277,7 @@ class FloatingIps(SyncAPIResource):
         )
 
 
-class AsyncFloatingIps(AsyncAPIResource):
+class AsyncFloatingIPs(AsyncAPIResource):
     actions: AsyncActions
 
     def __init__(self, client: AsyncHetzner) -> None:
@@ -299,7 +299,7 @@ class AsyncFloatingIps(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> FloatingIpCreateResponse:
+    ) -> FloatingIPCreateResponse:
         """Creates a new Floating IP assigned to a Server.
 
         If you want to create a Floating
@@ -338,12 +338,12 @@ class AsyncFloatingIps(AsyncAPIResource):
                     "name": name,
                     "server": server,
                 },
-                floating_ip_create_params.FloatingIpCreateParams,
+                floating_ip_create_params.FloatingIPCreateParams,
             ),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=FloatingIpCreateResponse,
+            cast_to=FloatingIPCreateResponse,
         )
 
     async def retrieve(
@@ -356,7 +356,7 @@ class AsyncFloatingIps(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> FloatingIpRetrieveResponse:
+    ) -> FloatingIPRetrieveResponse:
         """
         Returns a specific Floating IP object.
 
@@ -374,7 +374,7 @@ class AsyncFloatingIps(AsyncAPIResource):
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=FloatingIpRetrieveResponse,
+            cast_to=FloatingIPRetrieveResponse,
         )
 
     async def update(
@@ -390,7 +390,7 @@ class AsyncFloatingIps(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> FloatingIpUpdateResponse:
+    ) -> FloatingIPUpdateResponse:
         """Updates the description or labels of a Floating IP.
 
         Also note that when updating
@@ -421,12 +421,12 @@ class AsyncFloatingIps(AsyncAPIResource):
                     "labels": labels,
                     "name": name,
                 },
-                floating_ip_update_params.FloatingIpUpdateParams,
+                floating_ip_update_params.FloatingIPUpdateParams,
             ),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=FloatingIpUpdateResponse,
+            cast_to=FloatingIPUpdateResponse,
         )
 
     def list(
@@ -443,7 +443,7 @@ class AsyncFloatingIps(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> AsyncPaginator[FloatingIp, AsyncFloatingIpsPage[FloatingIp]]:
+    ) -> AsyncPaginator[FloatingIP, AsyncFloatingIPsPage[FloatingIP]]:
         """
         Returns all Floating IP objects.
 
@@ -472,7 +472,7 @@ class AsyncFloatingIps(AsyncAPIResource):
         """
         return self._get_api_list(
             "/floating_ips",
-            page=AsyncFloatingIpsPage[FloatingIp],
+            page=AsyncFloatingIPsPage[FloatingIP],
             options=make_request_options(
                 extra_headers=extra_headers,
                 extra_query=extra_query,
@@ -486,10 +486,10 @@ class AsyncFloatingIps(AsyncAPIResource):
                         "per_page": per_page,
                         "sort": sort,
                     },
-                    floating_ip_list_params.FloatingIpListParams,
+                    floating_ip_list_params.FloatingIPListParams,
                 ),
             ),
-            model=FloatingIp,
+            model=FloatingIP,
         )
 
     async def delete(

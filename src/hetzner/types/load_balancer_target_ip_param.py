@@ -4,10 +4,10 @@ from __future__ import annotations
 
 from typing_extensions import Required, TypedDict
 
-__all__ = ["LoadBalancerTargetIpParam"]
+__all__ = ["LoadBalancerTargetIPParam"]
 
 
-class LoadBalancerTargetIpParam(TypedDict, total=False):
+class LoadBalancerTargetIPParam(TypedDict, total=False):
     ip: Required[str]
     """
     IP of a server that belongs to the same customer (public IPv4/IPv6) or private

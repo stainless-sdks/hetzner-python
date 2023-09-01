@@ -5,10 +5,10 @@ from typing_extensions import Literal
 
 from .._models import BaseModel
 
-__all__ = ["IsoRetrieveResponse", "Iso"]
+__all__ = ["ISORetrieveResponse", "ISO"]
 
 
-class Iso(BaseModel):
+class ISO(BaseModel):
     id: int
     """ID of the Resource"""
 
@@ -35,5 +35,5 @@ class Iso(BaseModel):
     """Type of the ISO"""
 
 
-class IsoRetrieveResponse(BaseModel):
-    iso: Iso
+class ISORetrieveResponse(BaseModel):
+    iso: ISO

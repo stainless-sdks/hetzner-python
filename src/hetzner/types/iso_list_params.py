@@ -4,10 +4,10 @@ from __future__ import annotations
 
 from typing_extensions import TypedDict
 
-__all__ = ["IsoListParams"]
+__all__ = ["ISOListParams"]
 
 
-class IsoListParams(TypedDict, total=False):
+class ISOListParams(TypedDict, total=False):
     architecture: str
     """Return only ISOs with the given architecture."""
 

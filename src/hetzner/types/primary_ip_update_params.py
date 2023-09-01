@@ -5,10 +5,10 @@ from __future__ import annotations
 from typing import Dict
 from typing_extensions import TypedDict
 
-__all__ = ["PrimaryIpUpdateParams"]
+__all__ = ["PrimaryIPUpdateParams"]
 
 
-class PrimaryIpUpdateParams(TypedDict, total=False):
+class PrimaryIPUpdateParams(TypedDict, total=False):
     auto_delete: bool
     """Delete this Primary IP when the resource it is assigned to is deleted"""
 

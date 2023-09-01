@@ -4,10 +4,10 @@ from __future__ import annotations
 
 from typing_extensions import Literal, TypedDict
 
-__all__ = ["FloatingIpListParams"]
+__all__ = ["FloatingIPListParams"]
 
 
-class FloatingIpListParams(TypedDict, total=False):
+class FloatingIPListParams(TypedDict, total=False):
     label_selector: str
     """Can be used to filter Floating IPs by labels.
 

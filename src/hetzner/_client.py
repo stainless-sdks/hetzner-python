@@ -47,16 +47,16 @@ class Hetzner(SyncAPIClient):
     certificates: resources.Certificates
     datacenters: resources.Datacenters
     firewalls: resources.Firewalls
-    floating_ips: resources.FloatingIps
+    floating_ips: resources.FloatingIPs
     images: resources.Images
-    isos: resources.Isos
+    isos: resources.ISOs
     load_balancer_types: resources.LoadBalancerTypes
     load_balancers: resources.LoadBalancers
     locations: resources.Locations
     networks: resources.Networks
     placement_groups: resources.PlacementGroups
     pricing: resources.Pricing
-    primary_ips: resources.PrimaryIps
+    primary_ips: resources.PrimaryIPs
     server_types: resources.ServerTypes
     servers: resources.Servers
     ssh_keys: resources.SshKeys
@@ -121,16 +121,16 @@ class Hetzner(SyncAPIClient):
         self.certificates = resources.Certificates(self)
         self.datacenters = resources.Datacenters(self)
         self.firewalls = resources.Firewalls(self)
-        self.floating_ips = resources.FloatingIps(self)
+        self.floating_ips = resources.FloatingIPs(self)
         self.images = resources.Images(self)
-        self.isos = resources.Isos(self)
+        self.isos = resources.ISOs(self)
         self.load_balancer_types = resources.LoadBalancerTypes(self)
         self.load_balancers = resources.LoadBalancers(self)
         self.locations = resources.Locations(self)
         self.networks = resources.Networks(self)
         self.placement_groups = resources.PlacementGroups(self)
         self.pricing = resources.Pricing(self)
-        self.primary_ips = resources.PrimaryIps(self)
+        self.primary_ips = resources.PrimaryIPs(self)
         self.server_types = resources.ServerTypes(self)
         self.servers = resources.Servers(self)
         self.ssh_keys = resources.SshKeys(self)
@@ -208,16 +208,16 @@ class AsyncHetzner(AsyncAPIClient):
     certificates: resources.AsyncCertificates
     datacenters: resources.AsyncDatacenters
     firewalls: resources.AsyncFirewalls
-    floating_ips: resources.AsyncFloatingIps
+    floating_ips: resources.AsyncFloatingIPs
     images: resources.AsyncImages
-    isos: resources.AsyncIsos
+    isos: resources.AsyncISOs
     load_balancer_types: resources.AsyncLoadBalancerTypes
     load_balancers: resources.AsyncLoadBalancers
     locations: resources.AsyncLocations
     networks: resources.AsyncNetworks
     placement_groups: resources.AsyncPlacementGroups
     pricing: resources.AsyncPricing
-    primary_ips: resources.AsyncPrimaryIps
+    primary_ips: resources.AsyncPrimaryIPs
     server_types: resources.AsyncServerTypes
     servers: resources.AsyncServers
     ssh_keys: resources.AsyncSshKeys
@@ -282,16 +282,16 @@ class AsyncHetzner(AsyncAPIClient):
         self.certificates = resources.AsyncCertificates(self)
         self.datacenters = resources.AsyncDatacenters(self)
         self.firewalls = resources.AsyncFirewalls(self)
-        self.floating_ips = resources.AsyncFloatingIps(self)
+        self.floating_ips = resources.AsyncFloatingIPs(self)
         self.images = resources.AsyncImages(self)
-        self.isos = resources.AsyncIsos(self)
+        self.isos = resources.AsyncISOs(self)
         self.load_balancer_types = resources.AsyncLoadBalancerTypes(self)
         self.load_balancers = resources.AsyncLoadBalancers(self)
         self.locations = resources.AsyncLocations(self)
         self.networks = resources.AsyncNetworks(self)
         self.placement_groups = resources.AsyncPlacementGroups(self)
         self.pricing = resources.AsyncPricing(self)
-        self.primary_ips = resources.AsyncPrimaryIps(self)
+        self.primary_ips = resources.AsyncPrimaryIPs(self)
         self.server_types = resources.AsyncServerTypes(self)
         self.servers = resources.AsyncServers(self)
         self.ssh_keys = resources.AsyncSshKeys(self)

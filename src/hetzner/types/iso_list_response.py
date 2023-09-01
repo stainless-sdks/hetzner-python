@@ -6,10 +6,10 @@ from typing_extensions import Literal
 from .shared import ResponseMeta
 from .._models import BaseModel
 
-__all__ = ["IsoListResponse", "Iso"]
+__all__ = ["ISOListResponse", "ISO"]
 
 
-class Iso(BaseModel):
+class ISO(BaseModel):
     id: int
     """ID of the Resource"""
 
@@ -36,8 +36,8 @@ class Iso(BaseModel):
     """Type of the ISO"""
 
 
-class IsoListResponse(BaseModel):
-    isos: List[Iso]
+class ISOListResponse(BaseModel):
+    isos: List[ISO]
 
     meta: Optional[ResponseMeta] = None
     """Metadata contained in the response"""

@@ -16,7 +16,7 @@ from ...types.networks import (
     ActionAddSubnetResponse,
     ActionDeleteRouteResponse,
     ActionDeleteSubnetResponse,
-    ActionChangeIpRangeResponse,
+    ActionChangeIPRangeResponse,
     ActionChangeProtectionResponse,
     action_list_params,
     action_add_route_params,
@@ -253,7 +253,7 @@ class Actions(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> ActionChangeIpRangeResponse:
+    ) -> ActionChangeIPRangeResponse:
         """Changes the IP range of a Network.
 
         IP ranges can only be extended and never
@@ -286,11 +286,11 @@ class Actions(SyncAPIResource):
         """
         return self._post(
             f"/networks/{id}/actions/change_ip_range",
-            body=maybe_transform({"ip_range": ip_range}, action_change_ip_range_params.ActionChangeIpRangeParams),
+            body=maybe_transform({"ip_range": ip_range}, action_change_ip_range_params.ActionChangeIPRangeParams),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=ActionChangeIpRangeResponse,
+            cast_to=ActionChangeIPRangeResponse,
         )
 
     def change_protection(
@@ -651,7 +651,7 @@ class AsyncActions(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> ActionChangeIpRangeResponse:
+    ) -> ActionChangeIPRangeResponse:
         """Changes the IP range of a Network.
 
         IP ranges can only be extended and never
@@ -684,11 +684,11 @@ class AsyncActions(AsyncAPIResource):
         """
         return await self._post(
             f"/networks/{id}/actions/change_ip_range",
-            body=maybe_transform({"ip_range": ip_range}, action_change_ip_range_params.ActionChangeIpRangeParams),
+            body=maybe_transform({"ip_range": ip_range}, action_change_ip_range_params.ActionChangeIPRangeParams),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=ActionChangeIpRangeResponse,
+            cast_to=ActionChangeIPRangeResponse,
         )
 
     async def change_protection(

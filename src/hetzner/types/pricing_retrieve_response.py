@@ -5,17 +5,17 @@ from typing_extensions import Literal
 
 from .price import Price
 from .._models import BaseModel
-from .floating_ip_price_details import FloatingIpPriceDetails
+from .floating_ip_price_details import FloatingIPPriceDetails
 
 __all__ = [
     "PricingRetrieveResponse",
     "Pricing",
-    "PricingFloatingIp",
+    "PricingFloatingIP",
     "PricingImage",
     "PricingLoadBalancerType",
     "PricingLoadBalancerTypePrice",
-    "PricingPrimaryIp",
-    "PricingPrimaryIpPrice",
+    "PricingPrimaryIP",
+    "PricingPrimaryIPPrice",
     "PricingServerBackup",
     "PricingServerType",
     "PricingServerTypePrice",
@@ -24,7 +24,7 @@ __all__ = [
 ]
 
 
-class PricingFloatingIp(BaseModel):
+class PricingFloatingIP(BaseModel):
     price_monthly: Price
     """
     Hourly costs for a Resource in this Location | Monthly costs for a Resource in
@@ -88,7 +88,7 @@ class PricingLoadBalancerType(BaseModel):
     """Load Balancer type costs per Location"""
 
 
-class PricingPrimaryIpPrice(BaseModel):
+class PricingPrimaryIPPrice(BaseModel):
     location: str
     """Name of the Location the price is for"""
 
@@ -115,8 +115,8 @@ class PricingPrimaryIpPrice(BaseModel):
     """
 
 
-class PricingPrimaryIp(BaseModel):
-    prices: List[PricingPrimaryIpPrice]
+class PricingPrimaryIP(BaseModel):
+    prices: List[PricingPrimaryIPPrice]
     """Primary IP type costs per Location"""
 
     type: Literal["ipv4", "ipv6"]
@@ -196,10 +196,10 @@ class Pricing(BaseModel):
     currency: str
     """Currency the returned prices are expressed in, coded according to ISO 4217"""
 
-    floating_ip: PricingFloatingIp
+    floating_ip: PricingFloatingIP
     """The cost of one Floating IP per month"""
 
-    floating_ips: List[FloatingIpPriceDetails]
+    floating_ips: List[FloatingIPPriceDetails]
     """Costs of Floating IPs types per Location and type"""
 
     image: PricingImage
@@ -208,7 +208,7 @@ class Pricing(BaseModel):
     load_balancer_types: List[PricingLoadBalancerType]
     """Costs of Load Balancer types per Location and type"""
 
-    primary_ips: List[PricingPrimaryIp]
+    primary_ips: List[PricingPrimaryIP]
     """Costs of Primary IPs types per Location"""
 
     server_backup: PricingServerBackup

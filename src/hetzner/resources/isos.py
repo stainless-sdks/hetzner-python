@@ -2,16 +2,16 @@
 
 from __future__ import annotations
 
-from ..types import IsoListResponse, IsoRetrieveResponse, iso_list_params
+from ..types import ISOListResponse, ISORetrieveResponse, iso_list_params
 from .._types import NOT_GIVEN, Body, Query, Headers, NotGiven
 from .._utils import maybe_transform
 from .._resource import SyncAPIResource, AsyncAPIResource
 from .._base_client import make_request_options
 
-__all__ = ["Isos", "AsyncIsos"]
+__all__ = ["ISOs", "AsyncISOs"]
 
 
-class Isos(SyncAPIResource):
+class ISOs(SyncAPIResource):
     def retrieve(
         self,
         id: int,
@@ -22,7 +22,7 @@ class Isos(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> IsoRetrieveResponse:
+    ) -> ISORetrieveResponse:
         """
         Returns a specific ISO object.
 
@@ -40,7 +40,7 @@ class Isos(SyncAPIResource):
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=IsoRetrieveResponse,
+            cast_to=ISORetrieveResponse,
         )
 
     def list(
@@ -57,7 +57,7 @@ class Isos(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> IsoListResponse:
+    ) -> ISOListResponse:
         """
         Returns all available ISO objects.
 
@@ -98,14 +98,14 @@ class Isos(SyncAPIResource):
                         "page": page,
                         "per_page": per_page,
                     },
-                    iso_list_params.IsoListParams,
+                    iso_list_params.ISOListParams,
                 ),
             ),
-            cast_to=IsoListResponse,
+            cast_to=ISOListResponse,
         )
 
 
-class AsyncIsos(AsyncAPIResource):
+class AsyncISOs(AsyncAPIResource):
     async def retrieve(
         self,
         id: int,
@@ -116,7 +116,7 @@ class AsyncIsos(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> IsoRetrieveResponse:
+    ) -> ISORetrieveResponse:
         """
         Returns a specific ISO object.
 
@@ -134,7 +134,7 @@ class AsyncIsos(AsyncAPIResource):
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=IsoRetrieveResponse,
+            cast_to=ISORetrieveResponse,
         )
 
     async def list(
@@ -151,7 +151,7 @@ class AsyncIsos(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> IsoListResponse:
+    ) -> ISOListResponse:
         """
         Returns all available ISO objects.
 
@@ -192,8 +192,8 @@ class AsyncIsos(AsyncAPIResource):
                         "page": page,
                         "per_page": per_page,
                     },
-                    iso_list_params.IsoListParams,
+                    iso_list_params.ISOListParams,
                 ),
             ),
-            cast_to=IsoListResponse,
+            cast_to=ISOListResponse,
         )

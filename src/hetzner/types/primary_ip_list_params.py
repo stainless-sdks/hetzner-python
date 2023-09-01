@@ -4,10 +4,10 @@ from __future__ import annotations
 
 from typing_extensions import Literal, TypedDict
 
-__all__ = ["PrimaryIpListParams"]
+__all__ = ["PrimaryIPListParams"]
 
 
-class PrimaryIpListParams(TypedDict, total=False):
+class PrimaryIPListParams(TypedDict, total=False):
     ip: str
     """Can be used to filter resources by their ip.
 

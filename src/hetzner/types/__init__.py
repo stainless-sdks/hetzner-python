@@ -10,18 +10,18 @@ from .shared import SortParam as SortParam
 from .shared import StatusParam as StatusParam
 from .shared import HealthStatus as HealthStatus
 from .shared import ResponseMeta as ResponseMeta
-from .cpu_type import CpuType as CpuType
+from .cpu_type import CPUType as CPUType
 from .firewall import Firewall as Firewall
-from .primary_ip import PrimaryIp as PrimaryIp
+from .primary_ip import PrimaryIP as PrimaryIP
 from .rule_param import RuleParam as RuleParam
 from .certificate import Certificate as Certificate
-from .floating_ip import FloatingIp as FloatingIp
+from .floating_ip import FloatingIP as FloatingIP
 from .server_type import ServerType as ServerType
 from .load_balancer import LoadBalancer as LoadBalancer
-from .iso_list_params import IsoListParams as IsoListParams
+from .iso_list_params import ISOListParams as ISOListParams
 from .placement_group import PlacementGroup as PlacementGroup
 from .image_list_params import ImageListParams as ImageListParams
-from .iso_list_response import IsoListResponse as IsoListResponse
+from .iso_list_response import ISOListResponse as ISOListResponse
 from .server_public_net import ServerPublicNet as ServerPublicNet
 from .action_list_params import ActionListParams as ActionListParams
 from .server_list_params import ServerListParams as ServerListParams
@@ -39,7 +39,7 @@ from .volume_create_params import VolumeCreateParams as VolumeCreateParams
 from .volume_list_response import VolumeListResponse as VolumeListResponse
 from .volume_update_params import VolumeUpdateParams as VolumeUpdateParams
 from .image_update_response import ImageUpdateResponse as ImageUpdateResponse
-from .iso_retrieve_response import IsoRetrieveResponse as IsoRetrieveResponse
+from .iso_retrieve_response import ISORetrieveResponse as ISORetrieveResponse
 from .network_create_params import NetworkCreateParams as NetworkCreateParams
 from .network_list_response import NetworkListResponse as NetworkListResponse
 from .network_update_params import NetworkUpdateParams as NetworkUpdateParams
@@ -52,16 +52,16 @@ from .firewall_list_response import FirewallListResponse as FirewallListResponse
 from .firewall_update_params import FirewallUpdateParams as FirewallUpdateParams
 from .location_list_response import LocationListResponse as LocationListResponse
 from .price_per_time_monthly import PricePerTimeMonthly as PricePerTimeMonthly
-from .primary_ip_list_params import PrimaryIpListParams as PrimaryIpListParams
+from .primary_ip_list_params import PrimaryIPListParams as PrimaryIPListParams
 from .server_create_response import ServerCreateResponse as ServerCreateResponse
 from .server_delete_response import ServerDeleteResponse as ServerDeleteResponse
 from .server_update_response import ServerUpdateResponse as ServerUpdateResponse
 from .volume_create_response import VolumeCreateResponse as VolumeCreateResponse
 from .volume_update_response import VolumeUpdateResponse as VolumeUpdateResponse
 from .certificate_list_params import CertificateListParams as CertificateListParams
-from .floating_ip_list_params import FloatingIpListParams as FloatingIpListParams
+from .floating_ip_list_params import FloatingIPListParams as FloatingIPListParams
 from .image_retrieve_response import ImageRetrieveResponse as ImageRetrieveResponse
-from .load_balancer_target_ip import LoadBalancerTargetIp as LoadBalancerTargetIp
+from .load_balancer_target_ip import LoadBalancerTargetIP as LoadBalancerTargetIP
 from .network_create_response import NetworkCreateResponse as NetworkCreateResponse
 from .network_update_response import NetworkUpdateResponse as NetworkUpdateResponse
 from .server_type_list_params import ServerTypeListParams as ServerTypeListParams
@@ -71,9 +71,9 @@ from .action_retrieve_response import ActionRetrieveResponse as ActionRetrieveRe
 from .datacenter_list_response import DatacenterListResponse as DatacenterListResponse
 from .firewall_create_response import FirewallCreateResponse as FirewallCreateResponse
 from .firewall_update_response import FirewallUpdateResponse as FirewallUpdateResponse
-from .primary_ip_create_params import PrimaryIpCreateParams as PrimaryIpCreateParams
-from .primary_ip_list_response import PrimaryIpListResponse as PrimaryIpListResponse
-from .primary_ip_update_params import PrimaryIpUpdateParams as PrimaryIpUpdateParams
+from .primary_ip_create_params import PrimaryIPCreateParams as PrimaryIPCreateParams
+from .primary_ip_list_response import PrimaryIPListResponse as PrimaryIPListResponse
+from .primary_ip_update_params import PrimaryIPUpdateParams as PrimaryIPUpdateParams
 from .server_retrieve_response import ServerRetrieveResponse as ServerRetrieveResponse
 from .volume_retrieve_response import VolumeRetrieveResponse as VolumeRetrieveResponse
 from .certificate_create_params import (
@@ -85,9 +85,9 @@ from .certificate_list_response import (
 from .certificate_update_params import (
     CertificateUpdateParams as CertificateUpdateParams,
 )
-from .floating_ip_create_params import FloatingIpCreateParams as FloatingIpCreateParams
-from .floating_ip_price_details import FloatingIpPriceDetails as FloatingIpPriceDetails
-from .floating_ip_update_params import FloatingIpUpdateParams as FloatingIpUpdateParams
+from .floating_ip_create_params import FloatingIPCreateParams as FloatingIPCreateParams
+from .floating_ip_price_details import FloatingIPPriceDetails as FloatingIPPriceDetails
+from .floating_ip_update_params import FloatingIPUpdateParams as FloatingIPUpdateParams
 from .load_balancer_list_params import LoadBalancerListParams as LoadBalancerListParams
 from .network_retrieve_response import (
     NetworkRetrieveResponse as NetworkRetrieveResponse,
@@ -104,10 +104,10 @@ from .location_retrieve_response import (
     LocationRetrieveResponse as LocationRetrieveResponse,
 )
 from .primary_ip_create_response import (
-    PrimaryIpCreateResponse as PrimaryIpCreateResponse,
+    PrimaryIPCreateResponse as PrimaryIPCreateResponse,
 )
 from .primary_ip_update_response import (
-    PrimaryIpUpdateResponse as PrimaryIpUpdateResponse,
+    PrimaryIPUpdateResponse as PrimaryIPUpdateResponse,
 )
 from .certificate_create_response import (
     CertificateCreateResponse as CertificateCreateResponse,
@@ -116,10 +116,10 @@ from .certificate_update_response import (
     CertificateUpdateResponse as CertificateUpdateResponse,
 )
 from .floating_ip_create_response import (
-    FloatingIpCreateResponse as FloatingIpCreateResponse,
+    FloatingIPCreateResponse as FloatingIPCreateResponse,
 )
 from .floating_ip_update_response import (
-    FloatingIpUpdateResponse as FloatingIpUpdateResponse,
+    FloatingIPUpdateResponse as FloatingIPUpdateResponse,
 )
 from .load_balancer_create_params import (
     LoadBalancerCreateParams as LoadBalancerCreateParams,
@@ -140,19 +140,19 @@ from .datacenter_retrieve_response import (
     DatacenterRetrieveResponse as DatacenterRetrieveResponse,
 )
 from .primary_ip_retrieve_response import (
-    PrimaryIpRetrieveResponse as PrimaryIpRetrieveResponse,
+    PrimaryIPRetrieveResponse as PrimaryIPRetrieveResponse,
 )
 from .certificate_retrieve_response import (
     CertificateRetrieveResponse as CertificateRetrieveResponse,
 )
 from .floating_ip_retrieve_response import (
-    FloatingIpRetrieveResponse as FloatingIpRetrieveResponse,
+    FloatingIPRetrieveResponse as FloatingIPRetrieveResponse,
 )
 from .load_balancer_create_response import (
     LoadBalancerCreateResponse as LoadBalancerCreateResponse,
 )
 from .load_balancer_target_ip_param import (
-    LoadBalancerTargetIpParam as LoadBalancerTargetIpParam,
+    LoadBalancerTargetIPParam as LoadBalancerTargetIPParam,
 )
 from .load_balancer_update_response import (
     LoadBalancerUpdateResponse as LoadBalancerUpdateResponse,

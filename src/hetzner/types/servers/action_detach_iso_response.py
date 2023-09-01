@@ -3,9 +3,9 @@
 from ..shared import Action
 from ..._models import BaseModel
 
-__all__ = ["ActionDetachIsoResponse"]
+__all__ = ["ActionDetachISOResponse"]
 
 
-class ActionDetachIsoResponse(BaseModel):
+class ActionDetachISOResponse(BaseModel):
     action: Action
     """Actions show the results and progress of asynchronous requests to the API."""

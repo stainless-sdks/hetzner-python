@@ -5,10 +5,10 @@ from __future__ import annotations
 from typing import Dict
 from typing_extensions import TypedDict
 
-__all__ = ["FloatingIpUpdateParams"]
+__all__ = ["FloatingIPUpdateParams"]
 
 
-class FloatingIpUpdateParams(TypedDict, total=False):
+class FloatingIPUpdateParams(TypedDict, total=False):
     description: str
     """New Description to set"""
 

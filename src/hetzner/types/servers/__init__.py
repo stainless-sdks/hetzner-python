@@ -11,19 +11,19 @@ from .action_reset_response import ActionResetResponse as ActionResetResponse
 from .action_reboot_response import ActionRebootResponse as ActionRebootResponse
 from .action_poweron_response import ActionPoweronResponse as ActionPoweronResponse
 from .action_rebuild_response import ActionRebuildResponse as ActionRebuildResponse
-from .action_attach_iso_params import ActionAttachIsoParams as ActionAttachIsoParams
+from .action_attach_iso_params import ActionAttachISOParams as ActionAttachISOParams
 from .action_poweroff_response import ActionPoweroffResponse as ActionPoweroffResponse
 from .action_retrieve_response import ActionRetrieveResponse as ActionRetrieveResponse
 from .action_shutdown_response import ActionShutdownResponse as ActionShutdownResponse
 from .action_change_type_params import ActionChangeTypeParams as ActionChangeTypeParams
 from .action_attach_iso_response import (
-    ActionAttachIsoResponse as ActionAttachIsoResponse,
+    ActionAttachISOResponse as ActionAttachISOResponse,
 )
 from .action_create_image_params import (
     ActionCreateImageParams as ActionCreateImageParams,
 )
 from .action_detach_iso_response import (
-    ActionDetachIsoResponse as ActionDetachIsoResponse,
+    ActionDetachISOResponse as ActionDetachISOResponse,
 )
 from .action_change_type_response import (
     ActionChangeTypeResponse as ActionChangeTypeResponse,
@@ -32,7 +32,7 @@ from .action_enable_rescue_params import (
     ActionEnableRescueParams as ActionEnableRescueParams,
 )
 from .action_change_dns_ptr_params import (
-    ActionChangeDnsPtrParams as ActionChangeDnsPtrParams,
+    ActionChangeDNSPtrParams as ActionChangeDNSPtrParams,
 )
 from .action_create_image_response import (
     ActionCreateImageResponse as ActionCreateImageResponse,
@@ -44,10 +44,10 @@ from .action_enable_rescue_response import (
     ActionEnableRescueResponse as ActionEnableRescueResponse,
 )
 from .action_change_alias_ips_params import (
-    ActionChangeAliasIpsParams as ActionChangeAliasIpsParams,
+    ActionChangeAliasIPsParams as ActionChangeAliasIPsParams,
 )
 from .action_change_dns_ptr_response import (
-    ActionChangeDnsPtrResponse as ActionChangeDnsPtrResponse,
+    ActionChangeDNSPtrResponse as ActionChangeDNSPtrResponse,
 )
 from .action_disable_backup_response import (
     ActionDisableBackupResponse as ActionDisableBackupResponse,
@@ -68,7 +68,7 @@ from .action_request_console_response import (
     ActionRequestConsoleResponse as ActionRequestConsoleResponse,
 )
 from .action_change_alias_ips_response import (
-    ActionChangeAliasIpsResponse as ActionChangeAliasIpsResponse,
+    ActionChangeAliasIPsResponse as ActionChangeAliasIPsResponse,
 )
 from .action_attach_to_network_response import (
     ActionAttachToNetworkResponse as ActionAttachToNetworkResponse,

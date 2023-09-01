@@ -2,10 +2,10 @@
 
 from .._models import BaseModel
 
-__all__ = ["LoadBalancerTargetIp"]
+__all__ = ["LoadBalancerTargetIP"]
 
 
-class LoadBalancerTargetIp(BaseModel):
+class LoadBalancerTargetIP(BaseModel):
     ip: str
     """
     IP of a server that belongs to the same customer (public IPv4/IPv6) or private

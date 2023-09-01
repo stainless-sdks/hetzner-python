@@ -7,12 +7,12 @@ from ._models import BaseModel
 from ._base_client import BasePage, PageInfo, BaseSyncPage, BaseAsyncPage
 from .types.shared import ResponseMeta
 
-__all__ = ["SyncFloatingIpsPage", "AsyncFloatingIpsPage", "SyncServersPage", "AsyncServersPage"]
+__all__ = ["SyncFloatingIPsPage", "AsyncFloatingIPsPage", "SyncServersPage", "AsyncServersPage"]
 
 _BaseModelT = TypeVar("_BaseModelT", bound=BaseModel)
 
 
-class SyncFloatingIpsPage(BaseSyncPage[ModelT], BasePage[ModelT], Generic[ModelT]):
+class SyncFloatingIPsPage(BaseSyncPage[ModelT], BasePage[ModelT], Generic[ModelT]):
     floating_ips: List[ModelT]
     meta: ResponseMeta
 
@@ -24,7 +24,7 @@ class SyncFloatingIpsPage(BaseSyncPage[ModelT], BasePage[ModelT], Generic[ModelT
         return PageInfo(params={"page": current_page + 1})
 
 
-class AsyncFloatingIpsPage(BaseAsyncPage[ModelT], BasePage[ModelT], Generic[ModelT]):
+class AsyncFloatingIPsPage(BaseAsyncPage[ModelT], BasePage[ModelT], Generic[ModelT]):
     floating_ips: List[ModelT]
     meta: ResponseMeta
 

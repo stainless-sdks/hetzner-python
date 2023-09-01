@@ -6,10 +6,10 @@ from typing_extensions import Literal
 from .._models import BaseModel
 from .price_per_time_monthly import PricePerTimeMonthly
 
-__all__ = ["FloatingIpPriceDetails"]
+__all__ = ["FloatingIPPriceDetails"]
 
 
-class FloatingIpPriceDetails(BaseModel):
+class FloatingIPPriceDetails(BaseModel):
     prices: List[PricePerTimeMonthly]
     """Floating IP type costs per Location"""
 

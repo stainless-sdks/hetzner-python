@@ -14,7 +14,7 @@ from hetzner.types.load_balancers import (
     ActionAssTargetResponse,
     ActionAddServiceResponse,
     ActionChangeTypeResponse,
-    ActionChangeDnsPtrResponse,
+    ActionChangeDNSPtrResponse,
     ActionRemoveTargetResponse,
     ActionDeleteServiceResponse,
     ActionUpdateServiceResponse,
@@ -163,7 +163,7 @@ class TestActions:
             dns_ptr="lb1.example.com",
             ip="1.2.3.4",
         )
-        assert_matches_type(ActionChangeDnsPtrResponse, action, path=["response"])
+        assert_matches_type(ActionChangeDNSPtrResponse, action, path=["response"])
 
     @parametrize
     def test_method_change_protection(self, client: Hetzner) -> None:
@@ -421,7 +421,7 @@ class TestAsyncActions:
             dns_ptr="lb1.example.com",
             ip="1.2.3.4",
         )
-        assert_matches_type(ActionChangeDnsPtrResponse, action, path=["response"])
+        assert_matches_type(ActionChangeDNSPtrResponse, action, path=["response"])
 
     @parametrize
     async def test_method_change_protection(self, client: AsyncHetzner) -> None:

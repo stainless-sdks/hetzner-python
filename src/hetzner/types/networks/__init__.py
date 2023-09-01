@@ -21,13 +21,13 @@ from .action_delete_route_response import (
     ActionDeleteRouteResponse as ActionDeleteRouteResponse,
 )
 from .action_change_ip_range_params import (
-    ActionChangeIpRangeParams as ActionChangeIpRangeParams,
+    ActionChangeIPRangeParams as ActionChangeIPRangeParams,
 )
 from .action_delete_subnet_response import (
     ActionDeleteSubnetResponse as ActionDeleteSubnetResponse,
 )
 from .action_change_ip_range_response import (
-    ActionChangeIpRangeResponse as ActionChangeIpRangeResponse,
+    ActionChangeIPRangeResponse as ActionChangeIPRangeResponse,
 )
 from .action_change_protection_params import (
     ActionChangeProtectionParams as ActionChangeProtectionParams,

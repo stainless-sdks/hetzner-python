@@ -5,10 +5,10 @@ from __future__ import annotations
 from typing import Dict
 from typing_extensions import Literal, Required, TypedDict
 
-__all__ = ["FloatingIpCreateParams"]
+__all__ = ["FloatingIPCreateParams"]
 
 
-class FloatingIpCreateParams(TypedDict, total=False):
+class FloatingIPCreateParams(TypedDict, total=False):
     type: Required[Literal["ipv4", "ipv6"]]
     """The type of the IP"""
 

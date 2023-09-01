@@ -6,7 +6,7 @@ from typing import Dict, List
 from typing_extensions import Literal, Required, TypedDict
 
 from ..types import shared_params
-from .load_balancer_target_ip_param import LoadBalancerTargetIpParam
+from .load_balancer_target_ip_param import LoadBalancerTargetIPParam
 from .load_balancer_service_model_param import LoadBalancerServiceModelParam
 
 __all__ = [
@@ -106,7 +106,7 @@ class Target(TypedDict, total=False):
     Only present for target types "server" and "ip".
     """
 
-    ip: LoadBalancerTargetIpParam
+    ip: LoadBalancerTargetIPParam
     """IP targets where the traffic should be routed to.
 
     It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root

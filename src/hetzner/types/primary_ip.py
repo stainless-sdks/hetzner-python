@@ -5,7 +5,7 @@ from typing_extensions import Literal
 
 from .._models import BaseModel
 
-__all__ = ["PrimaryIp", "Datacenter", "DatacenterLocation", "DatacenterServerTypes", "DnsPtr", "Protection"]
+__all__ = ["PrimaryIP", "Datacenter", "DatacenterLocation", "DatacenterServerTypes", "DNSPtr", "Protection"]
 
 
 class DatacenterLocation(BaseModel):
@@ -72,7 +72,7 @@ class Datacenter(BaseModel):
     """The Server types the Datacenter can handle"""
 
 
-class DnsPtr(BaseModel):
+class DNSPtr(BaseModel):
     dns_ptr: str
     """DNS pointer for the specific IP address"""
 
@@ -91,7 +91,7 @@ class Protection(BaseModel):
     """
 
 
-class PrimaryIp(BaseModel):
+class PrimaryIP(BaseModel):
     id: int
     """ID of the Resource"""
 
@@ -119,7 +119,7 @@ class PrimaryIp(BaseModel):
     at
     """
 
-    dns_ptr: List[DnsPtr]
+    dns_ptr: List[DNSPtr]
     """Array of reverse DNS entries"""
 
     ip: str

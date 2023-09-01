@@ -17,17 +17,17 @@ from hetzner.types.servers import (
     ActionPoweroffResponse,
     ActionRetrieveResponse,
     ActionShutdownResponse,
-    ActionAttachIsoResponse,
-    ActionDetachIsoResponse,
+    ActionAttachISOResponse,
+    ActionDetachISOResponse,
     ActionChangeTypeResponse,
     ActionCreateImageResponse,
-    ActionChangeDnsPtrResponse,
+    ActionChangeDNSPtrResponse,
     ActionEnableBackupResponse,
     ActionEnableRescueResponse,
     ActionDisableBackupResponse,
     ActionDisableRescueResponse,
     ActionResetPasswordResponse,
-    ActionChangeAliasIpsResponse,
+    ActionChangeAliasIPsResponse,
     ActionRequestConsoleResponse,
     ActionAttachToNetworkResponse,
     ActionChangeProtectionResponse,
@@ -85,7 +85,7 @@ class TestActions:
             0,
             iso="FreeBSD-11.0-RELEASE-amd64-dvd1",
         )
-        assert_matches_type(ActionAttachIsoResponse, action, path=["response"])
+        assert_matches_type(ActionAttachISOResponse, action, path=["response"])
 
     @parametrize
     def test_method_attach_to_network(self, client: Hetzner) -> None:
@@ -112,7 +112,7 @@ class TestActions:
             alias_ips=["string", "string", "string"],
             network=4711,
         )
-        assert_matches_type(ActionChangeAliasIpsResponse, action, path=["response"])
+        assert_matches_type(ActionChangeAliasIPsResponse, action, path=["response"])
 
     @parametrize
     def test_method_change_dns_ptr(self, client: Hetzner) -> None:
@@ -121,7 +121,7 @@ class TestActions:
             dns_ptr="server01.example.com",
             ip="1.2.3.4",
         )
-        assert_matches_type(ActionChangeDnsPtrResponse, action, path=["response"])
+        assert_matches_type(ActionChangeDNSPtrResponse, action, path=["response"])
 
     @parametrize
     def test_method_change_protection(self, client: Hetzner) -> None:
@@ -178,7 +178,7 @@ class TestActions:
         action = client.servers.actions.detach_iso(
             0,
         )
-        assert_matches_type(ActionDetachIsoResponse, action, path=["response"])
+        assert_matches_type(ActionDetachISOResponse, action, path=["response"])
 
     @parametrize
     def test_method_disable_backup(self, client: Hetzner) -> None:
@@ -327,7 +327,7 @@ class TestAsyncActions:
             0,
             iso="FreeBSD-11.0-RELEASE-amd64-dvd1",
         )
-        assert_matches_type(ActionAttachIsoResponse, action, path=["response"])
+        assert_matches_type(ActionAttachISOResponse, action, path=["response"])
 
     @parametrize
     async def test_method_attach_to_network(self, client: AsyncHetzner) -> None:
@@ -354,7 +354,7 @@ class TestAsyncActions:
             alias_ips=["string", "string", "string"],
             network=4711,
         )
-        assert_matches_type(ActionChangeAliasIpsResponse, action, path=["response"])
+        assert_matches_type(ActionChangeAliasIPsResponse, action, path=["response"])
 
     @parametrize
     async def test_method_change_dns_ptr(self, client: AsyncHetzner) -> None:
@@ -363,7 +363,7 @@ class TestAsyncActions:
             dns_ptr="server01.example.com",
             ip="1.2.3.4",
         )
-        assert_matches_type(ActionChangeDnsPtrResponse, action, path=["response"])
+        assert_matches_type(ActionChangeDNSPtrResponse, action, path=["response"])
 
     @parametrize
     async def test_method_change_protection(self, client: AsyncHetzner) -> None:
@@ -420,7 +420,7 @@ class TestAsyncActions:
         action = await client.servers.actions.detach_iso(
             0,
         )
-        assert_matches_type(ActionDetachIsoResponse, action, path=["response"])
+        assert_matches_type(ActionDetachISOResponse, action, path=["response"])
 
     @parametrize
     async def test_method_disable_backup(self, client: AsyncHetzner) -> None:

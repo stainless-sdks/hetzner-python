@@ -5,7 +5,7 @@ from typing_extensions import Literal
 
 from .price import Price
 from .._models import BaseModel
-from .cpu_type import CpuType
+from .cpu_type import CPUType
 from .server_public_net import ServerPublicNet
 
 __all__ = [
@@ -16,7 +16,7 @@ __all__ = [
     "Image",
     "ImageCreatedFrom",
     "ImageProtection",
-    "Iso",
+    "ISO",
     "PrivateNet",
     "Protection",
     "ServerType",
@@ -170,7 +170,7 @@ class Image(BaseModel):
     """Indicates that rapid deploy of the Image is available"""
 
 
-class Iso(BaseModel):
+class ISO(BaseModel):
     id: int
     """ID of the Resource"""
 
@@ -250,7 +250,7 @@ class ServerType(BaseModel):
     cores: int
     """Number of cpu cores a Server of this type will have"""
 
-    cpu_type: CpuType
+    cpu_type: CPUType
     """Type of cpu"""
 
     deprecated: Optional[bool]
@@ -325,7 +325,7 @@ class Server(BaseModel):
     ingoing_traffic: Optional[int]
     """Inbound Traffic for the current billing period in bytes"""
 
-    iso: Optional[Iso]
+    iso: Optional[ISO]
     """ISO Image that is attached to this Server. Null if no ISO is attached."""
 
     labels: Dict[str, str]

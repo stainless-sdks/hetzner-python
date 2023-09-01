@@ -4,9 +4,9 @@ from __future__ import annotations
 
 from typing_extensions import Required, TypedDict
 
-__all__ = ["ActionAttachIsoParams"]
+__all__ = ["ActionAttachISOParams"]
 
 
-class ActionAttachIsoParams(TypedDict, total=False):
+class ActionAttachISOParams(TypedDict, total=False):
     iso: Required[str]
     """ID or name of ISO to attach to the Server as listed in GET `/isos`"""

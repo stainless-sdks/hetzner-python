@@ -23,7 +23,7 @@ from .action_remove_target_params import (
     ActionRemoveTargetParams as ActionRemoveTargetParams,
 )
 from .action_change_dns_ptr_params import (
-    ActionChangeDnsPtrParams as ActionChangeDnsPtrParams,
+    ActionChangeDNSPtrParams as ActionChangeDNSPtrParams,
 )
 from .action_delete_service_params import (
     ActionDeleteServiceParams as ActionDeleteServiceParams,
@@ -38,7 +38,7 @@ from .action_change_algorithm_params import (
     ActionChangeAlgorithmParams as ActionChangeAlgorithmParams,
 )
 from .action_change_dns_ptr_response import (
-    ActionChangeDnsPtrResponse as ActionChangeDnsPtrResponse,
+    ActionChangeDNSPtrResponse as ActionChangeDNSPtrResponse,
 )
 from .action_delete_service_response import (
     ActionDeleteServiceResponse as ActionDeleteServiceResponse,

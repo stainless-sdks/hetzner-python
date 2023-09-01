@@ -15,7 +15,7 @@ from hetzner.types.networks import (
     ActionAddSubnetResponse,
     ActionDeleteRouteResponse,
     ActionDeleteSubnetResponse,
-    ActionChangeIpRangeResponse,
+    ActionChangeIPRangeResponse,
     ActionChangeProtectionResponse,
 )
 
@@ -89,7 +89,7 @@ class TestActions:
             0,
             ip_range="10.0.0.0/12",
         )
-        assert_matches_type(ActionChangeIpRangeResponse, action, path=["response"])
+        assert_matches_type(ActionChangeIPRangeResponse, action, path=["response"])
 
     @parametrize
     def test_method_change_protection(self, client: Hetzner) -> None:
@@ -190,7 +190,7 @@ class TestAsyncActions:
             0,
             ip_range="10.0.0.0/12",
         )
-        assert_matches_type(ActionChangeIpRangeResponse, action, path=["response"])
+        assert_matches_type(ActionChangeIPRangeResponse, action, path=["response"])
 
     @parametrize
     async def test_method_change_protection(self, client: AsyncHetzner) -> None:

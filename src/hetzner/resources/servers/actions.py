@@ -19,17 +19,17 @@ from ...types.servers import (
     ActionPoweroffResponse,
     ActionRetrieveResponse,
     ActionShutdownResponse,
-    ActionAttachIsoResponse,
-    ActionDetachIsoResponse,
+    ActionAttachISOResponse,
+    ActionDetachISOResponse,
     ActionChangeTypeResponse,
     ActionCreateImageResponse,
-    ActionChangeDnsPtrResponse,
+    ActionChangeDNSPtrResponse,
     ActionEnableBackupResponse,
     ActionEnableRescueResponse,
     ActionDisableBackupResponse,
     ActionDisableRescueResponse,
     ActionResetPasswordResponse,
-    ActionChangeAliasIpsResponse,
+    ActionChangeAliasIPsResponse,
     ActionRequestConsoleResponse,
     ActionAttachToNetworkResponse,
     ActionChangeProtectionResponse,
@@ -202,7 +202,7 @@ class Actions(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> ActionAttachIsoResponse:
+    ) -> ActionAttachISOResponse:
         """Attaches an ISO to a Server.
 
         The Server will immediately see it as a new disk.
@@ -225,11 +225,11 @@ class Actions(SyncAPIResource):
         """
         return self._post(
             f"/servers/{id}/actions/attach_iso",
-            body=maybe_transform({"iso": iso}, action_attach_iso_params.ActionAttachIsoParams),
+            body=maybe_transform({"iso": iso}, action_attach_iso_params.ActionAttachISOParams),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=ActionAttachIsoResponse,
+            cast_to=ActionAttachISOResponse,
         )
 
     def attach_to_network(
@@ -312,7 +312,7 @@ class Actions(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> ActionChangeAliasIpsResponse:
+    ) -> ActionChangeAliasIPsResponse:
         """Changes the alias IPs of an already attached Network.
 
         Note that the existing
@@ -340,12 +340,12 @@ class Actions(SyncAPIResource):
                     "alias_ips": alias_ips,
                     "network": network,
                 },
-                action_change_alias_ips_params.ActionChangeAliasIpsParams,
+                action_change_alias_ips_params.ActionChangeAliasIPsParams,
             ),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=ActionChangeAliasIpsResponse,
+            cast_to=ActionChangeAliasIPsResponse,
         )
 
     def change_dns_ptr(
@@ -360,7 +360,7 @@ class Actions(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> ActionChangeDnsPtrResponse:
+    ) -> ActionChangeDNSPtrResponse:
         """
         Changes the hostname that will appear when getting the hostname belonging to the
         primary IPs (IPv4 and IPv6) of this Server.
@@ -387,12 +387,12 @@ class Actions(SyncAPIResource):
                     "dns_ptr": dns_ptr,
                     "ip": ip,
                 },
-                action_change_dns_ptr_params.ActionChangeDnsPtrParams,
+                action_change_dns_ptr_params.ActionChangeDNSPtrParams,
             ),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=ActionChangeDnsPtrResponse,
+            cast_to=ActionChangeDNSPtrResponse,
         )
 
     def change_protection(
@@ -609,7 +609,7 @@ class Actions(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> ActionDetachIsoResponse:
+    ) -> ActionDetachISOResponse:
         """Detaches an ISO from a Server.
 
         In case no ISO Image is attached to the Server,
@@ -629,7 +629,7 @@ class Actions(SyncAPIResource):
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=ActionDetachIsoResponse,
+            cast_to=ActionDetachISOResponse,
         )
 
     def disable_backup(
@@ -1266,7 +1266,7 @@ class AsyncActions(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> ActionAttachIsoResponse:
+    ) -> ActionAttachISOResponse:
         """Attaches an ISO to a Server.
 
         The Server will immediately see it as a new disk.
@@ -1289,11 +1289,11 @@ class AsyncActions(AsyncAPIResource):
         """
         return await self._post(
             f"/servers/{id}/actions/attach_iso",
-            body=maybe_transform({"iso": iso}, action_attach_iso_params.ActionAttachIsoParams),
+            body=maybe_transform({"iso": iso}, action_attach_iso_params.ActionAttachISOParams),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=ActionAttachIsoResponse,
+            cast_to=ActionAttachISOResponse,
         )
 
     async def attach_to_network(
@@ -1376,7 +1376,7 @@ class AsyncActions(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> ActionChangeAliasIpsResponse:
+    ) -> ActionChangeAliasIPsResponse:
         """Changes the alias IPs of an already attached Network.
 
         Note that the existing
@@ -1404,12 +1404,12 @@ class AsyncActions(AsyncAPIResource):
                     "alias_ips": alias_ips,
                     "network": network,
                 },
-                action_change_alias_ips_params.ActionChangeAliasIpsParams,
+                action_change_alias_ips_params.ActionChangeAliasIPsParams,
             ),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=ActionChangeAliasIpsResponse,
+            cast_to=ActionChangeAliasIPsResponse,
         )
 
     async def change_dns_ptr(
@@ -1424,7 +1424,7 @@ class AsyncActions(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> ActionChangeDnsPtrResponse:
+    ) -> ActionChangeDNSPtrResponse:
         """
         Changes the hostname that will appear when getting the hostname belonging to the
         primary IPs (IPv4 and IPv6) of this Server.
@@ -1451,12 +1451,12 @@ class AsyncActions(AsyncAPIResource):
                     "dns_ptr": dns_ptr,
                     "ip": ip,
                 },
-                action_change_dns_ptr_params.ActionChangeDnsPtrParams,
+                action_change_dns_ptr_params.ActionChangeDNSPtrParams,
             ),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=ActionChangeDnsPtrResponse,
+            cast_to=ActionChangeDNSPtrResponse,
         )
 
     async def change_protection(
@@ -1673,7 +1673,7 @@ class AsyncActions(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> ActionDetachIsoResponse:
+    ) -> ActionDetachISOResponse:
         """Detaches an ISO from a Server.
 
         In case no ISO Image is attached to the Server,
@@ -1693,7 +1693,7 @@ class AsyncActions(AsyncAPIResource):
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=ActionDetachIsoResponse,
+            cast_to=ActionDetachISOResponse,
         )
 
     async def disable_backup(

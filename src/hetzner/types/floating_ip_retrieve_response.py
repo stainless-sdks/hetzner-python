@@ -1,10 +1,10 @@
 # File generated from our OpenAPI spec by Stainless.
 
 from .._models import BaseModel
-from .floating_ip import FloatingIp
+from .floating_ip import FloatingIP
 
-__all__ = ["FloatingIpRetrieveResponse"]
+__all__ = ["FloatingIPRetrieveResponse"]
 
 
-class FloatingIpRetrieveResponse(BaseModel):
-    floating_ip: FloatingIp
+class FloatingIPRetrieveResponse(BaseModel):
+    floating_ip: FloatingIP

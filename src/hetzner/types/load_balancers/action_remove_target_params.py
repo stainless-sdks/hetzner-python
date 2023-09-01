@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing_extensions import Literal, Required, TypedDict
 
-from ..load_balancer_target_ip_param import LoadBalancerTargetIpParam
+from ..load_balancer_target_ip_param import LoadBalancerTargetIPParam
 
 __all__ = ["ActionRemoveTargetParams", "LabelSelector", "Server"]
 
@@ -13,7 +13,7 @@ class ActionRemoveTargetParams(TypedDict, total=False):
     type: Required[Literal["ip", "label_selector", "server"]]
     """Type of the resource"""
 
-    ip: LoadBalancerTargetIpParam
+    ip: LoadBalancerTargetIPParam
     """IP targets where the traffic should be routed to.
 
     It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root

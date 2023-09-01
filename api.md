@@ -115,25 +115,25 @@ Methods:
 - <code title="post /firewalls/{id}/actions/remove_from_resources">client.firewalls.actions.<a href="./src/hetzner/resources/firewalls/actions.py">remove_from_resources</a>(id, \*\*<a href="src/hetzner/types/firewalls/action_remove_from_resources_params.py">params</a>) -> <a href="./src/hetzner/types/firewalls/action_remove_from_resources_response.py">ActionRemoveFromResourcesResponse</a></code>
 - <code title="post /firewalls/{id}/actions/set_rules">client.firewalls.actions.<a href="./src/hetzner/resources/firewalls/actions.py">set_rules</a>(id, \*\*<a href="src/hetzner/types/firewalls/action_set_rules_params.py">params</a>) -> <a href="./src/hetzner/types/firewalls/action_set_rules_response.py">ActionSetRulesResponse</a></code>
 
-# FloatingIps
+# FloatingIPs
 
 Types:
 
 ```python
 from hetzner.types import (
-    FloatingIp,
-    FloatingIpCreateResponse,
-    FloatingIpRetrieveResponse,
-    FloatingIpUpdateResponse,
+    FloatingIP,
+    FloatingIPCreateResponse,
+    FloatingIPRetrieveResponse,
+    FloatingIPUpdateResponse,
 )
 ```
 
 Methods:
 
-- <code title="post /floating_ips">client.floating_ips.<a href="./src/hetzner/resources/floating_ips/floating_ips.py">create</a>(\*\*<a href="src/hetzner/types/floating_ip_create_params.py">params</a>) -> <a href="./src/hetzner/types/floating_ip_create_response.py">FloatingIpCreateResponse</a></code>
-- <code title="get /floating_ips/{id}">client.floating_ips.<a href="./src/hetzner/resources/floating_ips/floating_ips.py">retrieve</a>(id) -> <a href="./src/hetzner/types/floating_ip_retrieve_response.py">FloatingIpRetrieveResponse</a></code>
-- <code title="put /floating_ips/{id}">client.floating_ips.<a href="./src/hetzner/resources/floating_ips/floating_ips.py">update</a>(id, \*\*<a href="src/hetzner/types/floating_ip_update_params.py">params</a>) -> <a href="./src/hetzner/types/floating_ip_update_response.py">FloatingIpUpdateResponse</a></code>
-- <code title="get /floating_ips">client.floating_ips.<a href="./src/hetzner/resources/floating_ips/floating_ips.py">list</a>(\*\*<a href="src/hetzner/types/floating_ip_list_params.py">params</a>) -> <a href="./src/hetzner/types/floating_ip.py">SyncFloatingIpsPage[FloatingIp]</a></code>
+- <code title="post /floating_ips">client.floating_ips.<a href="./src/hetzner/resources/floating_ips/floating_ips.py">create</a>(\*\*<a href="src/hetzner/types/floating_ip_create_params.py">params</a>) -> <a href="./src/hetzner/types/floating_ip_create_response.py">FloatingIPCreateResponse</a></code>
+- <code title="get /floating_ips/{id}">client.floating_ips.<a href="./src/hetzner/resources/floating_ips/floating_ips.py">retrieve</a>(id) -> <a href="./src/hetzner/types/floating_ip_retrieve_response.py">FloatingIPRetrieveResponse</a></code>
+- <code title="put /floating_ips/{id}">client.floating_ips.<a href="./src/hetzner/resources/floating_ips/floating_ips.py">update</a>(id, \*\*<a href="src/hetzner/types/floating_ip_update_params.py">params</a>) -> <a href="./src/hetzner/types/floating_ip_update_response.py">FloatingIPUpdateResponse</a></code>
+- <code title="get /floating_ips">client.floating_ips.<a href="./src/hetzner/resources/floating_ips/floating_ips.py">list</a>(\*\*<a href="src/hetzner/types/floating_ip_list_params.py">params</a>) -> <a href="./src/hetzner/types/floating_ip.py">SyncFloatingIPsPage[FloatingIP]</a></code>
 - <code title="delete /floating_ips/{id}">client.floating_ips.<a href="./src/hetzner/resources/floating_ips/floating_ips.py">delete</a>(id) -> None</code>
 
 ## Actions
@@ -145,7 +145,7 @@ from hetzner.types.floating_ips import (
     ActionRetrieveResponse,
     ActionListResponse,
     ActionAssignResponse,
-    ActionChangeDnsPtrResponse,
+    ActionChangeDNSPtrResponse,
     ActionChangeProtectionResponse,
     ActionUnassignResponse,
 )
@@ -156,7 +156,7 @@ Methods:
 - <code title="get /floating_ips/{id}/actions/{action_id}">client.floating_ips.actions.<a href="./src/hetzner/resources/floating_ips/actions.py">retrieve</a>(id, action_id) -> <a href="./src/hetzner/types/floating_ips/action_retrieve_response.py">ActionRetrieveResponse</a></code>
 - <code title="get /floating_ips/{id}/actions">client.floating_ips.actions.<a href="./src/hetzner/resources/floating_ips/actions.py">list</a>(id, \*\*<a href="src/hetzner/types/floating_ips/action_list_params.py">params</a>) -> <a href="./src/hetzner/types/floating_ips/action_list_response.py">ActionListResponse</a></code>
 - <code title="post /floating_ips/{id}/actions/assign">client.floating_ips.actions.<a href="./src/hetzner/resources/floating_ips/actions.py">assign</a>(id, \*\*<a href="src/hetzner/types/floating_ips/action_assign_params.py">params</a>) -> <a href="./src/hetzner/types/floating_ips/action_assign_response.py">ActionAssignResponse</a></code>
-- <code title="post /floating_ips/{id}/actions/change_dns_ptr">client.floating_ips.actions.<a href="./src/hetzner/resources/floating_ips/actions.py">change_dns_ptr</a>(id, \*\*<a href="src/hetzner/types/floating_ips/action_change_dns_ptr_params.py">params</a>) -> <a href="./src/hetzner/types/floating_ips/action_change_dns_ptr_response.py">ActionChangeDnsPtrResponse</a></code>
+- <code title="post /floating_ips/{id}/actions/change_dns_ptr">client.floating_ips.actions.<a href="./src/hetzner/resources/floating_ips/actions.py">change_dns_ptr</a>(id, \*\*<a href="src/hetzner/types/floating_ips/action_change_dns_ptr_params.py">params</a>) -> <a href="./src/hetzner/types/floating_ips/action_change_dns_ptr_response.py">ActionChangeDNSPtrResponse</a></code>
 - <code title="post /floating_ips/{id}/actions/change_protection">client.floating_ips.actions.<a href="./src/hetzner/resources/floating_ips/actions.py">change_protection</a>(id, \*\*<a href="src/hetzner/types/floating_ips/action_change_protection_params.py">params</a>) -> <a href="./src/hetzner/types/floating_ips/action_change_protection_response.py">ActionChangeProtectionResponse</a></code>
 - <code title="post /floating_ips/{id}/actions/unassign">client.floating_ips.actions.<a href="./src/hetzner/resources/floating_ips/actions.py">unassign</a>(id) -> <a href="./src/hetzner/types/floating_ips/action_unassign_response.py">ActionUnassignResponse</a></code>
 
@@ -193,18 +193,18 @@ Methods:
 - <code title="get /images/{id}/actions">client.images.actions.<a href="./src/hetzner/resources/images/actions.py">list</a>(id, \*\*<a href="src/hetzner/types/images/action_list_params.py">params</a>) -> <a href="./src/hetzner/types/images/action_list_response.py">ActionListResponse</a></code>
 - <code title="post /images/{id}/actions/change_protection">client.images.actions.<a href="./src/hetzner/resources/images/actions.py">change_protection</a>(id, \*\*<a href="src/hetzner/types/images/action_change_protection_params.py">params</a>) -> <a href="./src/hetzner/types/images/action_change_protection_response.py">ActionChangeProtectionResponse</a></code>
 
-# Isos
+# ISOs
 
 Types:
 
 ```python
-from hetzner.types import IsoRetrieveResponse, IsoListResponse
+from hetzner.types import ISORetrieveResponse, ISOListResponse
 ```
 
 Methods:
 
-- <code title="get /isos/{id}">client.isos.<a href="./src/hetzner/resources/isos.py">retrieve</a>(id) -> <a href="./src/hetzner/types/iso_retrieve_response.py">IsoRetrieveResponse</a></code>
-- <code title="get /isos">client.isos.<a href="./src/hetzner/resources/isos.py">list</a>(\*\*<a href="src/hetzner/types/iso_list_params.py">params</a>) -> <a href="./src/hetzner/types/iso_list_response.py">IsoListResponse</a></code>
+- <code title="get /isos/{id}">client.isos.<a href="./src/hetzner/resources/isos.py">retrieve</a>(id) -> <a href="./src/hetzner/types/iso_retrieve_response.py">ISORetrieveResponse</a></code>
+- <code title="get /isos">client.isos.<a href="./src/hetzner/resources/isos.py">list</a>(\*\*<a href="src/hetzner/types/iso_list_params.py">params</a>) -> <a href="./src/hetzner/types/iso_list_response.py">ISOListResponse</a></code>
 
 # LoadBalancerTypes
 
@@ -227,7 +227,7 @@ Types:
 from hetzner.types import (
     LoadBalancer,
     LoadBalancerServiceModel,
-    LoadBalancerTargetIp,
+    LoadBalancerTargetIP,
     LoadBalancerCreateResponse,
     LoadBalancerRetrieveResponse,
     LoadBalancerUpdateResponse,
@@ -255,7 +255,7 @@ from hetzner.types.load_balancers import (
     ActionAssTargetResponse,
     ActionAttachToNetworkResponse,
     ActionChangeAlgorithmResponse,
-    ActionChangeDnsPtrResponse,
+    ActionChangeDNSPtrResponse,
     ActionChangeProtectionResponse,
     ActionChangeTypeResponse,
     ActionDeleteServiceResponse,
@@ -275,7 +275,7 @@ Methods:
 - <code title="post /load_balancers/{id}/actions/add_target">client.load_balancers.actions.<a href="./src/hetzner/resources/load_balancers/actions.py">ass_target</a>(id, \*\*<a href="src/hetzner/types/load_balancers/action_ass_target_params.py">params</a>) -> <a href="./src/hetzner/types/load_balancers/action_ass_target_response.py">ActionAssTargetResponse</a></code>
 - <code title="post /load_balancers/{id}/actions/attach_to_network">client.load_balancers.actions.<a href="./src/hetzner/resources/load_balancers/actions.py">attach_to_network</a>(id, \*\*<a href="src/hetzner/types/load_balancers/action_attach_to_network_params.py">params</a>) -> <a href="./src/hetzner/types/load_balancers/action_attach_to_network_response.py">ActionAttachToNetworkResponse</a></code>
 - <code title="post /load_balancers/{id}/actions/change_algorithm">client.load_balancers.actions.<a href="./src/hetzner/resources/load_balancers/actions.py">change_algorithm</a>(id, \*\*<a href="src/hetzner/types/load_balancers/action_change_algorithm_params.py">params</a>) -> <a href="./src/hetzner/types/load_balancers/action_change_algorithm_response.py">ActionChangeAlgorithmResponse</a></code>
-- <code title="post /load_balancers/{id}/actions/change_dns_ptr">client.load_balancers.actions.<a href="./src/hetzner/resources/load_balancers/actions.py">change_dns_ptr</a>(id, \*\*<a href="src/hetzner/types/load_balancers/action_change_dns_ptr_params.py">params</a>) -> <a href="./src/hetzner/types/load_balancers/action_change_dns_ptr_response.py">ActionChangeDnsPtrResponse</a></code>
+- <code title="post /load_balancers/{id}/actions/change_dns_ptr">client.load_balancers.actions.<a href="./src/hetzner/resources/load_balancers/actions.py">change_dns_ptr</a>(id, \*\*<a href="src/hetzner/types/load_balancers/action_change_dns_ptr_params.py">params</a>) -> <a href="./src/hetzner/types/load_balancers/action_change_dns_ptr_response.py">ActionChangeDNSPtrResponse</a></code>
 - <code title="post /load_balancers/{id}/actions/change_protection">client.load_balancers.actions.<a href="./src/hetzner/resources/load_balancers/actions.py">change_protection</a>(id, \*\*<a href="src/hetzner/types/load_balancers/action_change_protection_params.py">params</a>) -> <a href="./src/hetzner/types/load_balancers/action_change_protection_response.py">ActionChangeProtectionResponse</a></code>
 - <code title="post /load_balancers/{id}/actions/change_type">client.load_balancers.actions.<a href="./src/hetzner/resources/load_balancers/actions.py">change_type</a>(id, \*\*<a href="src/hetzner/types/load_balancers/action_change_type_params.py">params</a>) -> <a href="./src/hetzner/types/load_balancers/action_change_type_response.py">ActionChangeTypeResponse</a></code>
 - <code title="post /load_balancers/{id}/actions/delete_service">client.load_balancers.actions.<a href="./src/hetzner/resources/load_balancers/actions.py">delete_service</a>(id, \*\*<a href="src/hetzner/types/load_balancers/action_delete_service_params.py">params</a>) -> <a href="./src/hetzner/types/load_balancers/action_delete_service_response.py">ActionDeleteServiceResponse</a></code>
@@ -341,7 +341,7 @@ from hetzner.types.networks import (
     ActionListResponse,
     ActionAddRouteResponse,
     ActionAddSubnetResponse,
-    ActionChangeIpRangeResponse,
+    ActionChangeIPRangeResponse,
     ActionChangeProtectionResponse,
     ActionDeleteRouteResponse,
     ActionDeleteSubnetResponse,
@@ -354,7 +354,7 @@ Methods:
 - <code title="get /networks/{id}/actions">client.networks.actions.<a href="./src/hetzner/resources/networks/actions.py">list</a>(id, \*\*<a href="src/hetzner/types/networks/action_list_params.py">params</a>) -> <a href="./src/hetzner/types/networks/action_list_response.py">ActionListResponse</a></code>
 - <code title="post /networks/{id}/actions/add_route">client.networks.actions.<a href="./src/hetzner/resources/networks/actions.py">add_route</a>(id, \*\*<a href="src/hetzner/types/networks/action_add_route_params.py">params</a>) -> <a href="./src/hetzner/types/networks/action_add_route_response.py">ActionAddRouteResponse</a></code>
 - <code title="post /networks/{id}/actions/add_subnet">client.networks.actions.<a href="./src/hetzner/resources/networks/actions.py">add_subnet</a>(id, \*\*<a href="src/hetzner/types/networks/action_add_subnet_params.py">params</a>) -> <a href="./src/hetzner/types/networks/action_add_subnet_response.py">ActionAddSubnetResponse</a></code>
-- <code title="post /networks/{id}/actions/change_ip_range">client.networks.actions.<a href="./src/hetzner/resources/networks/actions.py">change_ip_range</a>(id, \*\*<a href="src/hetzner/types/networks/action_change_ip_range_params.py">params</a>) -> <a href="./src/hetzner/types/networks/action_change_ip_range_response.py">ActionChangeIpRangeResponse</a></code>
+- <code title="post /networks/{id}/actions/change_ip_range">client.networks.actions.<a href="./src/hetzner/resources/networks/actions.py">change_ip_range</a>(id, \*\*<a href="src/hetzner/types/networks/action_change_ip_range_params.py">params</a>) -> <a href="./src/hetzner/types/networks/action_change_ip_range_response.py">ActionChangeIPRangeResponse</a></code>
 - <code title="post /networks/{id}/actions/change_protection">client.networks.actions.<a href="./src/hetzner/resources/networks/actions.py">change_protection</a>(id, \*\*<a href="src/hetzner/types/networks/action_change_protection_params.py">params</a>) -> <a href="./src/hetzner/types/networks/action_change_protection_response.py">ActionChangeProtectionResponse</a></code>
 - <code title="post /networks/{id}/actions/delete_route">client.networks.actions.<a href="./src/hetzner/resources/networks/actions.py">delete_route</a>(id, \*\*<a href="src/hetzner/types/networks/action_delete_route_params.py">params</a>) -> <a href="./src/hetzner/types/networks/action_delete_route_response.py">ActionDeleteRouteResponse</a></code>
 - <code title="post /networks/{id}/actions/delete_subnet">client.networks.actions.<a href="./src/hetzner/resources/networks/actions.py">delete_subnet</a>(id, \*\*<a href="src/hetzner/types/networks/action_delete_subnet_params.py">params</a>) -> <a href="./src/hetzner/types/networks/action_delete_subnet_response.py">ActionDeleteSubnetResponse</a></code>
@@ -387,7 +387,7 @@ Types:
 
 ```python
 from hetzner.types import (
-    FloatingIpPriceDetails,
+    FloatingIPPriceDetails,
     Price,
     PricePerTimeMonthly,
     PricingRetrieveResponse,
@@ -398,26 +398,26 @@ Methods:
 
 - <code title="get /pricing">client.pricing.<a href="./src/hetzner/resources/pricing.py">retrieve</a>() -> <a href="./src/hetzner/types/pricing_retrieve_response.py">PricingRetrieveResponse</a></code>
 
-# PrimaryIps
+# PrimaryIPs
 
 Types:
 
 ```python
 from hetzner.types import (
-    PrimaryIp,
-    PrimaryIpCreateResponse,
-    PrimaryIpRetrieveResponse,
-    PrimaryIpUpdateResponse,
-    PrimaryIpListResponse,
+    PrimaryIP,
+    PrimaryIPCreateResponse,
+    PrimaryIPRetrieveResponse,
+    PrimaryIPUpdateResponse,
+    PrimaryIPListResponse,
 )
 ```
 
 Methods:
 
-- <code title="post /primary_ips">client.primary_ips.<a href="./src/hetzner/resources/primary_ips/primary_ips.py">create</a>(\*\*<a href="src/hetzner/types/primary_ip_create_params.py">params</a>) -> <a href="./src/hetzner/types/primary_ip_create_response.py">PrimaryIpCreateResponse</a></code>
-- <code title="get /primary_ips/{id}">client.primary_ips.<a href="./src/hetzner/resources/primary_ips/primary_ips.py">retrieve</a>(id) -> <a href="./src/hetzner/types/primary_ip_retrieve_response.py">PrimaryIpRetrieveResponse</a></code>
-- <code title="put /primary_ips/{id}">client.primary_ips.<a href="./src/hetzner/resources/primary_ips/primary_ips.py">update</a>(id, \*\*<a href="src/hetzner/types/primary_ip_update_params.py">params</a>) -> <a href="./src/hetzner/types/primary_ip_update_response.py">PrimaryIpUpdateResponse</a></code>
-- <code title="get /primary_ips">client.primary_ips.<a href="./src/hetzner/resources/primary_ips/primary_ips.py">list</a>(\*\*<a href="src/hetzner/types/primary_ip_list_params.py">params</a>) -> <a href="./src/hetzner/types/primary_ip_list_response.py">PrimaryIpListResponse</a></code>
+- <code title="post /primary_ips">client.primary_ips.<a href="./src/hetzner/resources/primary_ips/primary_ips.py">create</a>(\*\*<a href="src/hetzner/types/primary_ip_create_params.py">params</a>) -> <a href="./src/hetzner/types/primary_ip_create_response.py">PrimaryIPCreateResponse</a></code>
+- <code title="get /primary_ips/{id}">client.primary_ips.<a href="./src/hetzner/resources/primary_ips/primary_ips.py">retrieve</a>(id) -> <a href="./src/hetzner/types/primary_ip_retrieve_response.py">PrimaryIPRetrieveResponse</a></code>
+- <code title="put /primary_ips/{id}">client.primary_ips.<a href="./src/hetzner/resources/primary_ips/primary_ips.py">update</a>(id, \*\*<a href="src/hetzner/types/primary_ip_update_params.py">params</a>) -> <a href="./src/hetzner/types/primary_ip_update_response.py">PrimaryIPUpdateResponse</a></code>
+- <code title="get /primary_ips">client.primary_ips.<a href="./src/hetzner/resources/primary_ips/primary_ips.py">list</a>(\*\*<a href="src/hetzner/types/primary_ip_list_params.py">params</a>) -> <a href="./src/hetzner/types/primary_ip_list_response.py">PrimaryIPListResponse</a></code>
 - <code title="delete /primary_ips/{id}">client.primary_ips.<a href="./src/hetzner/resources/primary_ips/primary_ips.py">delete</a>(id) -> None</code>
 
 ## Actions
@@ -429,7 +429,7 @@ from hetzner.types.primary_ips import (
     ActionRetrieveResponse,
     ActionListResponse,
     ActionAssignResponse,
-    ActionChangeDnsPtrResponse,
+    ActionChangeDNSPtrResponse,
     ActionChangeProtectionResponse,
     ActionUnassignResponse,
 )
@@ -440,7 +440,7 @@ Methods:
 - <code title="get /primary_ips/actions/{id}">client.primary_ips.actions.<a href="./src/hetzner/resources/primary_ips/actions.py">retrieve</a>(id) -> <a href="./src/hetzner/types/primary_ips/action_retrieve_response.py">ActionRetrieveResponse</a></code>
 - <code title="get /primary_ips/actions">client.primary_ips.actions.<a href="./src/hetzner/resources/primary_ips/actions.py">list</a>(\*\*<a href="src/hetzner/types/primary_ips/action_list_params.py">params</a>) -> <a href="./src/hetzner/types/primary_ips/action_list_response.py">ActionListResponse</a></code>
 - <code title="post /primary_ips/{id}/actions/assign">client.primary_ips.actions.<a href="./src/hetzner/resources/primary_ips/actions.py">assign</a>(id, \*\*<a href="src/hetzner/types/primary_ips/action_assign_params.py">params</a>) -> <a href="./src/hetzner/types/primary_ips/action_assign_response.py">ActionAssignResponse</a></code>
-- <code title="post /primary_ips/{id}/actions/change_dns_ptr">client.primary_ips.actions.<a href="./src/hetzner/resources/primary_ips/actions.py">change_dns_ptr</a>(id, \*\*<a href="src/hetzner/types/primary_ips/action_change_dns_ptr_params.py">params</a>) -> <a href="./src/hetzner/types/primary_ips/action_change_dns_ptr_response.py">ActionChangeDnsPtrResponse</a></code>
+- <code title="post /primary_ips/{id}/actions/change_dns_ptr">client.primary_ips.actions.<a href="./src/hetzner/resources/primary_ips/actions.py">change_dns_ptr</a>(id, \*\*<a href="src/hetzner/types/primary_ips/action_change_dns_ptr_params.py">params</a>) -> <a href="./src/hetzner/types/primary_ips/action_change_dns_ptr_response.py">ActionChangeDNSPtrResponse</a></code>
 - <code title="post /primary_ips/{id}/actions/change_protection">client.primary_ips.actions.<a href="./src/hetzner/resources/primary_ips/actions.py">change_protection</a>(id, \*\*<a href="src/hetzner/types/primary_ips/action_change_protection_params.py">params</a>) -> <a href="./src/hetzner/types/primary_ips/action_change_protection_response.py">ActionChangeProtectionResponse</a></code>
 - <code title="post /primary_ips/{id}/actions/unassign">client.primary_ips.actions.<a href="./src/hetzner/resources/primary_ips/actions.py">unassign</a>(id) -> <a href="./src/hetzner/types/primary_ips/action_unassign_response.py">ActionUnassignResponse</a></code>
 
@@ -450,7 +450,7 @@ Types:
 
 ```python
 from hetzner.types import (
-    CpuType,
+    CPUType,
     ServerType,
     ServerTypeRetrieveResponse,
     ServerTypeListResponse,
@@ -494,15 +494,15 @@ from hetzner.types.servers import (
     ActionRetrieveResponse,
     ActionListResponse,
     ActionAddToPlacementGroupResponse,
-    ActionAttachIsoResponse,
+    ActionAttachISOResponse,
     ActionAttachToNetworkResponse,
-    ActionChangeAliasIpsResponse,
-    ActionChangeDnsPtrResponse,
+    ActionChangeAliasIPsResponse,
+    ActionChangeDNSPtrResponse,
     ActionChangeProtectionResponse,
     ActionChangeTypeResponse,
     ActionCreateImageResponse,
     ActionDetachFromNetworkResponse,
-    ActionDetachIsoResponse,
+    ActionDetachISOResponse,
     ActionDisableBackupResponse,
     ActionDisableRescueResponse,
     ActionEnableBackupResponse,
@@ -524,15 +524,15 @@ Methods:
 - <code title="get /servers/{id}/actions/{action_id}">client.servers.actions.<a href="./src/hetzner/resources/servers/actions.py">retrieve</a>(id, action_id) -> <a href="./src/hetzner/types/servers/action_retrieve_response.py">ActionRetrieveResponse</a></code>
 - <code title="get /servers/{id}/actions">client.servers.actions.<a href="./src/hetzner/resources/servers/actions.py">list</a>(id, \*\*<a href="src/hetzner/types/servers/action_list_params.py">params</a>) -> <a href="./src/hetzner/types/servers/action_list_response.py">ActionListResponse</a></code>
 - <code title="post /servers/{id}/actions/add_to_placement_group">client.servers.actions.<a href="./src/hetzner/resources/servers/actions.py">add_to_placement_group</a>(id, \*\*<a href="src/hetzner/types/servers/action_add_to_placement_group_params.py">params</a>) -> <a href="./src/hetzner/types/servers/action_add_to_placement_group_response.py">ActionAddToPlacementGroupResponse</a></code>
-- <code title="post /servers/{id}/actions/attach_iso">client.servers.actions.<a href="./src/hetzner/resources/servers/actions.py">attach_iso</a>(id, \*\*<a href="src/hetzner/types/servers/action_attach_iso_params.py">params</a>) -> <a href="./src/hetzner/types/servers/action_attach_iso_response.py">ActionAttachIsoResponse</a></code>
+- <code title="post /servers/{id}/actions/attach_iso">client.servers.actions.<a href="./src/hetzner/resources/servers/actions.py">attach_iso</a>(id, \*\*<a href="src/hetzner/types/servers/action_attach_iso_params.py">params</a>) -> <a href="./src/hetzner/types/servers/action_attach_iso_response.py">ActionAttachISOResponse</a></code>
 - <code title="post /servers/{id}/actions/attach_to_network">client.servers.actions.<a href="./src/hetzner/resources/servers/actions.py">attach_to_network</a>(id, \*\*<a href="src/hetzner/types/servers/action_attach_to_network_params.py">params</a>) -> <a href="./src/hetzner/types/servers/action_attach_to_network_response.py">ActionAttachToNetworkResponse</a></code>
-- <code title="post /servers/{id}/actions/change_alias_ips">client.servers.actions.<a href="./src/hetzner/resources/servers/actions.py">change_alias_ips</a>(id, \*\*<a href="src/hetzner/types/servers/action_change_alias_ips_params.py">params</a>) -> <a href="./src/hetzner/types/servers/action_change_alias_ips_response.py">ActionChangeAliasIpsResponse</a></code>
-- <code title="post /servers/{id}/actions/change_dns_ptr">client.servers.actions.<a href="./src/hetzner/resources/servers/actions.py">change_dns_ptr</a>(id, \*\*<a href="src/hetzner/types/servers/action_change_dns_ptr_params.py">params</a>) -> <a href="./src/hetzner/types/servers/action_change_dns_ptr_response.py">ActionChangeDnsPtrResponse</a></code>
+- <code title="post /servers/{id}/actions/change_alias_ips">client.servers.actions.<a href="./src/hetzner/resources/servers/actions.py">change_alias_ips</a>(id, \*\*<a href="src/hetzner/types/servers/action_change_alias_ips_params.py">params</a>) -> <a href="./src/hetzner/types/servers/action_change_alias_ips_response.py">ActionChangeAliasIPsResponse</a></code>
+- <code title="post /servers/{id}/actions/change_dns_ptr">client.servers.actions.<a href="./src/hetzner/resources/servers/actions.py">change_dns_ptr</a>(id, \*\*<a href="src/hetzner/types/servers/action_change_dns_ptr_params.py">params</a>) -> <a href="./src/hetzner/types/servers/action_change_dns_ptr_response.py">ActionChangeDNSPtrResponse</a></code>
 - <code title="post /servers/{id}/actions/change_protection">client.servers.actions.<a href="./src/hetzner/resources/servers/actions.py">change_protection</a>(id, \*\*<a href="src/hetzner/types/servers/action_change_protection_params.py">params</a>) -> <a href="./src/hetzner/types/servers/action_change_protection_response.py">ActionChangeProtectionResponse</a></code>
 - <code title="post /servers/{id}/actions/change_type">client.servers.actions.<a href="./src/hetzner/resources/servers/actions.py">change_type</a>(id, \*\*<a href="src/hetzner/types/servers/action_change_type_params.py">params</a>) -> <a href="./src/hetzner/types/servers/action_change_type_response.py">ActionChangeTypeResponse</a></code>
 - <code title="post /servers/{id}/actions/create_image">client.servers.actions.<a href="./src/hetzner/resources/servers/actions.py">create_image</a>(id, \*\*<a href="src/hetzner/types/servers/action_create_image_params.py">params</a>) -> <a href="./src/hetzner/types/servers/action_create_image_response.py">ActionCreateImageResponse</a></code>
 - <code title="post /servers/{id}/actions/detach_from_network">client.servers.actions.<a href="./src/hetzner/resources/servers/actions.py">detach_from_network</a>(id, \*\*<a href="src/hetzner/types/servers/action_detach_from_network_params.py">params</a>) -> <a href="./src/hetzner/types/servers/action_detach_from_network_response.py">ActionDetachFromNetworkResponse</a></code>
-- <code title="post /servers/{id}/actions/detach_iso">client.servers.actions.<a href="./src/hetzner/resources/servers/actions.py">detach_iso</a>(id) -> <a href="./src/hetzner/types/servers/action_detach_iso_response.py">ActionDetachIsoResponse</a></code>
+- <code title="post /servers/{id}/actions/detach_iso">client.servers.actions.<a href="./src/hetzner/resources/servers/actions.py">detach_iso</a>(id) -> <a href="./src/hetzner/types/servers/action_detach_iso_response.py">ActionDetachISOResponse</a></code>
 - <code title="post /servers/{id}/actions/disable_backup">client.servers.actions.<a href="./src/hetzner/resources/servers/actions.py">disable_backup</a>(id) -> <a href="./src/hetzner/types/servers/action_disable_backup_response.py">ActionDisableBackupResponse</a></code>
 - <code title="post /servers/{id}/actions/disable_rescue">client.servers.actions.<a href="./src/hetzner/resources/servers/actions.py">disable_rescue</a>(id) -> <a href="./src/hetzner/types/servers/action_disable_rescue_response.py">ActionDisableRescueResponse</a></code>
 - <code title="post /servers/{id}/actions/enable_backup">client.servers.actions.<a href="./src/hetzner/resources/servers/actions.py">enable_backup</a>(id) -> <a href="./src/hetzner/types/servers/action_enable_backup_response.py">ActionEnableBackupResponse</a></code>

@@ -14,7 +14,7 @@ from ...types.floating_ips import (
     ActionAssignResponse,
     ActionRetrieveResponse,
     ActionUnassignResponse,
-    ActionChangeDnsPtrResponse,
+    ActionChangeDNSPtrResponse,
     ActionChangeProtectionResponse,
     action_list_params,
     action_assign_params,
@@ -164,7 +164,7 @@ class Actions(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> ActionChangeDnsPtrResponse:
+    ) -> ActionChangeDNSPtrResponse:
         """
         Changes the hostname that will appear when getting the hostname belonging to
         this Floating IP.
@@ -190,12 +190,12 @@ class Actions(SyncAPIResource):
                     "dns_ptr": dns_ptr,
                     "ip": ip,
                 },
-                action_change_dns_ptr_params.ActionChangeDnsPtrParams,
+                action_change_dns_ptr_params.ActionChangeDNSPtrParams,
             ),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=ActionChangeDnsPtrResponse,
+            cast_to=ActionChangeDNSPtrResponse,
         )
 
     def change_protection(
@@ -406,7 +406,7 @@ class AsyncActions(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | None | NotGiven = NOT_GIVEN,
-    ) -> ActionChangeDnsPtrResponse:
+    ) -> ActionChangeDNSPtrResponse:
         """
         Changes the hostname that will appear when getting the hostname belonging to
         this Floating IP.
@@ -432,12 +432,12 @@ class AsyncActions(AsyncAPIResource):
                     "dns_ptr": dns_ptr,
                     "ip": ip,
                 },
-                action_change_dns_ptr_params.ActionChangeDnsPtrParams,
+                action_change_dns_ptr_params.ActionChangeDNSPtrParams,
             ),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=ActionChangeDnsPtrResponse,
+            cast_to=ActionChangeDNSPtrResponse,
         )
 
     async def change_protection(
