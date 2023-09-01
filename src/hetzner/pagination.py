@@ -37,8 +37,8 @@ class AsyncFloatingIpsPage(BaseAsyncPage[ModelT], BasePage[ModelT], Generic[Mode
 
 
 class SyncServersPage(BaseSyncPage[ModelT], BasePage[ModelT], Generic[ModelT]):
-    servers: List[ModelT]
     meta: ResponseMeta
+    servers: List[ModelT]
 
     def _get_page_items(self) -> List[ModelT]:
         return self.servers
@@ -49,8 +49,8 @@ class SyncServersPage(BaseSyncPage[ModelT], BasePage[ModelT], Generic[ModelT]):
 
 
 class AsyncServersPage(BaseAsyncPage[ModelT], BasePage[ModelT], Generic[ModelT]):
-    servers: List[ModelT]
     meta: ResponseMeta
+    servers: List[ModelT]
 
     def _get_page_items(self) -> List[ModelT]:
         return self.servers
